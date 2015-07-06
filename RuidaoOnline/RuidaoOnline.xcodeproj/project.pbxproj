@@ -12,7 +12,13 @@
 		1D0E09141B40DEBE005B749F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0E09121B40DEBE005B749F /* Main.storyboard */; };
 		1D0E09161B40DEBE005B749F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D0E09151B40DEBE005B749F /* Images.xcassets */; };
 		1D0E09251B40DEBE005B749F /* RuidaoOnlineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0E09241B40DEBE005B749F /* RuidaoOnlineTests.m */; };
+		1D114A791B4504F80077AECF /* ROLogRegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D114A781B4504F80077AECF /* ROLogRegViewController.m */; };
+		1D114A7D1B4512AE0077AECF /* ROLogonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D114A7C1B4512AE0077AECF /* ROLogonViewController.m */; };
+		1D114A821B4674C40077AECF /* MBProgressHUD+ROHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D114A811B4674C40077AECF /* MBProgressHUD+ROHUD.m */; };
+		1D114A861B47736E0077AECF /* ROLogonReturnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D114A851B47736E0077AECF /* ROLogonReturnModel.m */; };
+		1D114A8A1B4784770077AECF /* RONetworkMngTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D114A891B4784770077AECF /* RONetworkMngTool.m */; };
 		1D7A4A061B423AEA005193F1 /* ROViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A4A051B423AEA005193F1 /* ROViewController.m */; };
+		8E1D37379A961E0F223C2DFD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA99A2FC18101785CC71CB9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CBE4DBB59F739A7148FFBF4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1D0E09051B40DEBE005B749F /* RuidaoOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuidaoOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0E09091B40DEBE005B749F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D0E090A1B40DEBE005B749F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -36,8 +43,20 @@
 		1D0E091E1B40DEBE005B749F /* RuidaoOnlineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuidaoOnlineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0E09231B40DEBE005B749F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D0E09241B40DEBE005B749F /* RuidaoOnlineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuidaoOnlineTests.m; sourceTree = "<group>"; };
+		1D114A771B4504F80077AECF /* ROLogRegViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROLogRegViewController.h; sourceTree = "<group>"; };
+		1D114A781B4504F80077AECF /* ROLogRegViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROLogRegViewController.m; sourceTree = "<group>"; };
+		1D114A7B1B4512AE0077AECF /* ROLogonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROLogonViewController.h; sourceTree = "<group>"; };
+		1D114A7C1B4512AE0077AECF /* ROLogonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROLogonViewController.m; sourceTree = "<group>"; };
+		1D114A801B4674C40077AECF /* MBProgressHUD+ROHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ROHUD.h"; sourceTree = "<group>"; };
+		1D114A811B4674C40077AECF /* MBProgressHUD+ROHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+ROHUD.m"; sourceTree = "<group>"; };
+		1D114A841B47736E0077AECF /* ROLogonReturnModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROLogonReturnModel.h; sourceTree = "<group>"; };
+		1D114A851B47736E0077AECF /* ROLogonReturnModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROLogonReturnModel.m; sourceTree = "<group>"; };
+		1D114A881B4784770077AECF /* RONetworkMngTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RONetworkMngTool.h; sourceTree = "<group>"; };
+		1D114A891B4784770077AECF /* RONetworkMngTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RONetworkMngTool.m; sourceTree = "<group>"; };
 		1D7A4A041B423AEA005193F1 /* ROViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROViewController.h; sourceTree = "<group>"; };
 		1D7A4A051B423AEA005193F1 /* ROViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROViewController.m; sourceTree = "<group>"; };
+		8AA99A2FC18101785CC71CB9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		983BF0FA4637723E476B3558 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E1D37379A961E0F223C2DFD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01361D8FE3CD98A39FEB0B08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CBE4DBB59F739A7148FFBF4 /* Pods.debug.xcconfig */,
+				983BF0FA4637723E476B3558 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1D0E08FC1B40DEBE005B749F = {
 			isa = PBXGroup;
 			children = (
 				1D0E09071B40DEBE005B749F /* RuidaoOnline */,
 				1D0E09211B40DEBE005B749F /* RuidaoOnlineTests */,
 				1D0E09061B40DEBE005B749F /* Products */,
+				01361D8FE3CD98A39FEB0B08 /* Pods */,
+				38E57A9BBE8781FDF6444EB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +110,7 @@
 		1D0E09071B40DEBE005B749F /* RuidaoOnline */ = {
 			isa = PBXGroup;
 			children = (
+				1D114A7E1B4674510077AECF /* Common */,
 				1D7A4A011B423A0B005193F1 /* Other */,
 				1D7A4A001B4239F5005193F1 /* UI */,
 				1D0E09121B40DEBE005B749F /* Main.storyboard */,
@@ -114,6 +146,61 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1D114A761B4504AE0077AECF /* LogonRegPage */ = {
+			isa = PBXGroup;
+			children = (
+				1D114A771B4504F80077AECF /* ROLogRegViewController.h */,
+				1D114A781B4504F80077AECF /* ROLogRegViewController.m */,
+			);
+			name = LogonRegPage;
+			sourceTree = "<group>";
+		};
+		1D114A7A1B4512920077AECF /* LogonPage */ = {
+			isa = PBXGroup;
+			children = (
+				1D114A831B47730B0077AECF /* Model */,
+				1D114A7B1B4512AE0077AECF /* ROLogonViewController.h */,
+				1D114A7C1B4512AE0077AECF /* ROLogonViewController.m */,
+			);
+			name = LogonPage;
+			sourceTree = "<group>";
+		};
+		1D114A7E1B4674510077AECF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1D114A871B4784390077AECF /* Tools */,
+				1D114A7F1B46745D0077AECF /* Catagory */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		1D114A7F1B46745D0077AECF /* Catagory */ = {
+			isa = PBXGroup;
+			children = (
+				1D114A801B4674C40077AECF /* MBProgressHUD+ROHUD.h */,
+				1D114A811B4674C40077AECF /* MBProgressHUD+ROHUD.m */,
+			);
+			name = Catagory;
+			sourceTree = "<group>";
+		};
+		1D114A831B47730B0077AECF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D114A841B47736E0077AECF /* ROLogonReturnModel.h */,
+				1D114A851B47736E0077AECF /* ROLogonReturnModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1D114A871B4784390077AECF /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				1D114A881B4784770077AECF /* RONetworkMngTool.h */,
+				1D114A891B4784770077AECF /* RONetworkMngTool.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
 		1D7A4A001B4239F5005193F1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +221,8 @@
 		1D7A4A021B423A43005193F1 /* LogonReg */ = {
 			isa = PBXGroup;
 			children = (
+				1D114A7A1B4512920077AECF /* LogonPage */,
+				1D114A761B4504AE0077AECF /* LogonRegPage */,
 				1D7A4A031B423A81005193F1 /* MainPage */,
 			);
 			name = LogonReg;
@@ -148,6 +237,14 @@
 			name = MainPage;
 			sourceTree = "<group>";
 		};
+		38E57A9BBE8781FDF6444EB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AA99A2FC18101785CC71CB9 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,9 +252,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D0E09281B40DEBE005B749F /* Build configuration list for PBXNativeTarget "RuidaoOnline" */;
 			buildPhases = (
+				41684505FD27AC89F46ECEC7 /* Check Pods Manifest.lock */,
 				1D0E09011B40DEBE005B749F /* Sources */,
 				1D0E09021B40DEBE005B749F /* Frameworks */,
 				1D0E09031B40DEBE005B749F /* Resources */,
+				F650D9E87145AA8658585D0C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +296,7 @@
 				TargetAttributes = {
 					1D0E09041B40DEBE005B749F = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = ASW4CSW355;
 					};
 					1D0E091D1B40DEBE005B749F = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -242,14 +342,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		41684505FD27AC89F46ECEC7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F650D9E87145AA8658585D0C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1D0E09011B40DEBE005B749F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D114A8A1B4784770077AECF /* RONetworkMngTool.m in Sources */,
 				1D0E090E1B40DEBE005B749F /* AppDelegate.m in Sources */,
+				1D114A7D1B4512AE0077AECF /* ROLogonViewController.m in Sources */,
+				1D114A821B4674C40077AECF /* MBProgressHUD+ROHUD.m in Sources */,
 				1D0E090B1B40DEBE005B749F /* main.m in Sources */,
 				1D7A4A061B423AEA005193F1 /* ROViewController.m in Sources */,
+				1D114A791B4504F80077AECF /* ROLogRegViewController.m in Sources */,
+				1D114A861B47736E0077AECF /* ROLogonReturnModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,25 +505,35 @@
 		};
 		1D0E09291B40DEBE005B749F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CBE4DBB59F739A7148FFBF4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RuidaoOnline/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		1D0E092A1B40DEBE005B749F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 983BF0FA4637723E476B3558 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RuidaoOnline/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
