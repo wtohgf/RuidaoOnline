@@ -14,12 +14,15 @@
 #import <ACSimpleKeychain.h>
 #import "ROLogonReturnModel.h"
 #import "RONetworkMngTool.h"
+#import "ROMainTabBarController.h"
 
 @interface ROLogonViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *passWord;
 @property (weak, nonatomic) IBOutlet UITextField *checkCode;
 @property (weak, nonatomic) IBOutlet UIImageView *checkCodeImage;
+@property (weak, nonatomic) IBOutlet UIButton *saveUserPwdButton;
+- (IBAction)saveUserPwd:(UIButton *)sender;
 
 @end
 
@@ -78,6 +81,10 @@
 }
 
 - (IBAction)logon:(UIButton *)sender {
+#ifdef DEBUG
+    //切换window的根控制器
+    [UIApplication sharedApplication].keyWindow.rootViewController = [[ROMainTabBarController alloc]init];
+#else
     //取得用户名和密码
     if (_userName.text.length == 0) {
         [MBProgressHUD showDelayHUDToView:self.view messeage:@"用户名没有输入"];
@@ -103,12 +110,31 @@
             
             [[RONetworkMngTool sharedNetworkMngTool] RONetwork_LogonWithParameters:parameters View:self.view Result:^(NSString *flag) {
                 if ([flag isEqualToString:@"1"]) {
-                    //登录后 主界面的切换
+                    if (_saveUserPwdButton.selected == YES) {
+                        [[ACSimpleKeychain defaultKeychain] storeUsername:_userName.text password:_passWord.text identifier:@"user1" forService:@"userpassword"];
+                    }
+                    else
+                    {
+                        [[ACSimpleKeychain defaultKeychain] deleteAllCredentialsForService:@"userpassword"];
+                    }
+                    //切换window的根控制器
+                    [UIApplication sharedApplication].keyWindow.rootViewController = [[ROMainTabBarController alloc]init];
                 }
             }];
         }
     }
-    
+#endif
+}
+
+#pragma mark 用户密码保存与否的选择
+/*
+ normal/default 按钮的默认状态 
+ highlighted 当用点击了按钮 没有抬起的那段时间  按钮是处于这个状态
+ selected 这种状态和用户的操作无关，用户操作不会讲按钮改变selected状态，只能是用代码改变。
+ */
+- (IBAction)saveUserPwd:(UIButton *)sender {
+    //改变按钮的选中状态 每次点击切换选中状态
+    sender.selected = !sender.selected;
 }
 
 @end

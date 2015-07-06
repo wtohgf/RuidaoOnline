@@ -17,6 +17,7 @@
 		1D114A821B4674C40077AECF /* MBProgressHUD+ROHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D114A811B4674C40077AECF /* MBProgressHUD+ROHUD.m */; };
 		1D114A861B47736E0077AECF /* ROLogonReturnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D114A851B47736E0077AECF /* ROLogonReturnModel.m */; };
 		1D114A8A1B4784770077AECF /* RONetworkMngTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D114A891B4784770077AECF /* RONetworkMngTool.m */; };
+		1D17F0101B4A20680047F5EC /* ROMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D17F00F1B4A20680047F5EC /* ROMainTabBarController.m */; };
 		1D7A4A061B423AEA005193F1 /* ROViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A4A051B423AEA005193F1 /* ROViewController.m */; };
 		8E1D37379A961E0F223C2DFD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA99A2FC18101785CC71CB9 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,8 @@
 		1D114A851B47736E0077AECF /* ROLogonReturnModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROLogonReturnModel.m; sourceTree = "<group>"; };
 		1D114A881B4784770077AECF /* RONetworkMngTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RONetworkMngTool.h; sourceTree = "<group>"; };
 		1D114A891B4784770077AECF /* RONetworkMngTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RONetworkMngTool.m; sourceTree = "<group>"; };
+		1D17F00E1B4A20680047F5EC /* ROMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROMainTabBarController.h; sourceTree = "<group>"; };
+		1D17F00F1B4A20680047F5EC /* ROMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROMainTabBarController.m; sourceTree = "<group>"; };
 		1D7A4A041B423AEA005193F1 /* ROViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROViewController.h; sourceTree = "<group>"; };
 		1D7A4A051B423AEA005193F1 /* ROViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROViewController.m; sourceTree = "<group>"; };
 		8AA99A2FC18101785CC71CB9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,9 +204,27 @@
 			name = Tools;
 			sourceTree = "<group>";
 		};
+		1D17F00C1B4A1FD90047F5EC /* MainUI */ = {
+			isa = PBXGroup;
+			children = (
+				1D17F00D1B4A1FFA0047F5EC /* MainTabController */,
+			);
+			name = MainUI;
+			sourceTree = "<group>";
+		};
+		1D17F00D1B4A1FFA0047F5EC /* MainTabController */ = {
+			isa = PBXGroup;
+			children = (
+				1D17F00E1B4A20680047F5EC /* ROMainTabBarController.h */,
+				1D17F00F1B4A20680047F5EC /* ROMainTabBarController.m */,
+			);
+			name = MainTabController;
+			sourceTree = "<group>";
+		};
 		1D7A4A001B4239F5005193F1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1D17F00C1B4A1FD90047F5EC /* MainUI */,
 				1D7A4A021B423A43005193F1 /* LogonReg */,
 			);
 			name = UI;
@@ -387,6 +408,7 @@
 				1D0E090B1B40DEBE005B749F /* main.m in Sources */,
 				1D7A4A061B423AEA005193F1 /* ROViewController.m in Sources */,
 				1D114A791B4504F80077AECF /* ROLogRegViewController.m in Sources */,
+				1D17F0101B4A20680047F5EC /* ROMainTabBarController.m in Sources */,
 				1D114A861B47736E0077AECF /* ROLogonReturnModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,7 +534,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RuidaoOnline/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -529,7 +551,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RuidaoOnline/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
