@@ -18,6 +18,10 @@
 		1D114A861B47736E0077AECF /* ROLogonReturnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D114A851B47736E0077AECF /* ROLogonReturnModel.m */; };
 		1D114A8A1B4784770077AECF /* RONetworkMngTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D114A891B4784770077AECF /* RONetworkMngTool.m */; };
 		1D17F0101B4A20680047F5EC /* ROMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D17F00F1B4A20680047F5EC /* ROMainTabBarController.m */; };
+		1D17F0151B4A4ACF0047F5EC /* OnlineLearn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D17F0141B4A4ACF0047F5EC /* OnlineLearn.storyboard */; };
+		1D17F0171B4A4AE90047F5EC /* OnLineTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D17F0161B4A4AE90047F5EC /* OnLineTest.storyboard */; };
+		1D17F0191B4A4AF50047F5EC /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D17F0181B4A4AF50047F5EC /* Me.storyboard */; };
+		1D17F01D1B4A5B390047F5EC /* ROMeMainPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D17F01C1B4A5B390047F5EC /* ROMeMainPageController.m */; };
 		1D7A4A061B423AEA005193F1 /* ROViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A4A051B423AEA005193F1 /* ROViewController.m */; };
 		8E1D37379A961E0F223C2DFD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA99A2FC18101785CC71CB9 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -56,6 +60,11 @@
 		1D114A891B4784770077AECF /* RONetworkMngTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RONetworkMngTool.m; sourceTree = "<group>"; };
 		1D17F00E1B4A20680047F5EC /* ROMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROMainTabBarController.h; sourceTree = "<group>"; };
 		1D17F00F1B4A20680047F5EC /* ROMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROMainTabBarController.m; sourceTree = "<group>"; };
+		1D17F0141B4A4ACF0047F5EC /* OnlineLearn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnlineLearn.storyboard; sourceTree = "<group>"; };
+		1D17F0161B4A4AE90047F5EC /* OnLineTest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnLineTest.storyboard; sourceTree = "<group>"; };
+		1D17F0181B4A4AF50047F5EC /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
+		1D17F01B1B4A5B390047F5EC /* ROMeMainPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROMeMainPageController.h; sourceTree = "<group>"; };
+		1D17F01C1B4A5B390047F5EC /* ROMeMainPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROMeMainPageController.m; sourceTree = "<group>"; };
 		1D7A4A041B423AEA005193F1 /* ROViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROViewController.h; sourceTree = "<group>"; };
 		1D7A4A051B423AEA005193F1 /* ROViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROViewController.m; sourceTree = "<group>"; };
 		8AA99A2FC18101785CC71CB9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +216,9 @@
 		1D17F00C1B4A1FD90047F5EC /* MainUI */ = {
 			isa = PBXGroup;
 			children = (
+				1D17F0131B4A4A7A0047F5EC /* Me */,
+				1D17F0121B4A4A710047F5EC /* OnLineTest */,
+				1D17F0111B4A4A640047F5EC /* OnLineLearn */,
 				1D17F00D1B4A1FFA0047F5EC /* MainTabController */,
 			);
 			name = MainUI;
@@ -219,6 +231,40 @@
 				1D17F00F1B4A20680047F5EC /* ROMainTabBarController.m */,
 			);
 			name = MainTabController;
+			sourceTree = "<group>";
+		};
+		1D17F0111B4A4A640047F5EC /* OnLineLearn */ = {
+			isa = PBXGroup;
+			children = (
+				1D17F0141B4A4ACF0047F5EC /* OnlineLearn.storyboard */,
+			);
+			name = OnLineLearn;
+			sourceTree = "<group>";
+		};
+		1D17F0121B4A4A710047F5EC /* OnLineTest */ = {
+			isa = PBXGroup;
+			children = (
+				1D17F0161B4A4AE90047F5EC /* OnLineTest.storyboard */,
+			);
+			name = OnLineTest;
+			sourceTree = "<group>";
+		};
+		1D17F0131B4A4A7A0047F5EC /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				1D17F01A1B4A5ACE0047F5EC /* MeMainPage */,
+				1D17F0181B4A4AF50047F5EC /* Me.storyboard */,
+			);
+			name = Me;
+			sourceTree = "<group>";
+		};
+		1D17F01A1B4A5ACE0047F5EC /* MeMainPage */ = {
+			isa = PBXGroup;
+			children = (
+				1D17F01B1B4A5B390047F5EC /* ROMeMainPageController.h */,
+				1D17F01C1B4A5B390047F5EC /* ROMeMainPageController.m */,
+			);
+			name = MeMainPage;
 			sourceTree = "<group>";
 		};
 		1D7A4A001B4239F5005193F1 /* UI */ = {
@@ -349,6 +395,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D17F0151B4A4ACF0047F5EC /* OnlineLearn.storyboard in Resources */,
+				1D17F0171B4A4AE90047F5EC /* OnLineTest.storyboard in Resources */,
+				1D17F0191B4A4AF50047F5EC /* Me.storyboard in Resources */,
 				1D0E09141B40DEBE005B749F /* Main.storyboard in Resources */,
 				1D0E09161B40DEBE005B749F /* Images.xcassets in Resources */,
 			);
@@ -403,6 +452,7 @@
 			files = (
 				1D114A8A1B4784770077AECF /* RONetworkMngTool.m in Sources */,
 				1D0E090E1B40DEBE005B749F /* AppDelegate.m in Sources */,
+				1D17F01D1B4A5B390047F5EC /* ROMeMainPageController.m in Sources */,
 				1D114A7D1B4512AE0077AECF /* ROLogonViewController.m in Sources */,
 				1D114A821B4674C40077AECF /* MBProgressHUD+ROHUD.m in Sources */,
 				1D0E090B1B40DEBE005B749F /* main.m in Sources */,

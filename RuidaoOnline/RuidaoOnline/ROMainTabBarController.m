@@ -19,22 +19,22 @@
 
 #pragma mark 设置 所有的子控制器 定义字控制器的图标和标题
 - (void)setupTabBarController{
-    UIViewController *firstViewController = [[UIViewController alloc] init];
-    UIViewController *firstNavigationController = [[UINavigationController alloc]
-                                                   initWithRootViewController:firstViewController];
-    firstViewController.view.backgroundColor = [UIColor redColor];
     
-    UIViewController *secondViewController = [[UIViewController alloc] init];
-    UIViewController *secondNavigationController = [[UINavigationController alloc]
-                                                    initWithRootViewController:secondViewController];
-    secondViewController.view.backgroundColor = [UIColor greenColor];
-    UIViewController *thirdViewController = [[UIViewController alloc] init];
-    UIViewController *thirdNavigationController = [[UINavigationController alloc]
-                                                   initWithRootViewController:thirdViewController];
-    thirdViewController.view.backgroundColor = [UIColor blueColor];
+    //从storyBoard中取得 在线学习主页对应的导航控制器即可。
+    UIStoryboard* onlineLearnStoryBoard = [UIStoryboard storyboardWithName:@"OnlineLearn" bundle:nil];
     
-    [self setViewControllers:@[firstNavigationController, secondNavigationController,
-                                           thirdNavigationController]];
+    UIViewController* onlineLearnNavgationController = [onlineLearnStoryBoard instantiateViewControllerWithIdentifier:@"onLineLearnNav"];
+    
+    
+    UIStoryboard* onolinetestStoryBoard = [UIStoryboard storyboardWithName:@"OnLineTest" bundle:nil];
+    
+    UIViewController* onlineTestNavgationController = [onolinetestStoryBoard instantiateViewControllerWithIdentifier:@"onlineTestNav"];
+    
+    UIStoryboard* meStoryBoard = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
+    
+    UIViewController* meNavgationController = [meStoryBoard instantiateViewControllerWithIdentifier:@"meNav"];
+    
+    [self setViewControllers:@[onlineLearnNavgationController, onlineTestNavgationController, meNavgationController]];
 
     UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
     UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];

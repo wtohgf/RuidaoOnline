@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--在线学习主页-->
+        <scene sceneID="jnh-3l-OGM">
+            <objects>
+                <tableViewController title="在线学习主页" id="f1k-nf-Swu" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sPz-Pc-F4s">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XAt-Vt-Uyv">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XAt-Vt-Uyv" id="kO9-TA-naO">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="f1k-nf-Swu" id="cvm-TE-swd"/>
+                            <outlet property="delegate" destination="f1k-nf-Swu" id="TKp-pI-JT5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="在线学习" id="jpR-PJ-oLu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ADw-wJ-XpG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="561" y="352"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6oj-e0-1Gg">
+            <objects>
+                <navigationController storyboardIdentifier="onLineLearnNav" id="d0d-5f-iVt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uaK-iA-SB6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="f1k-nf-Swu" kind="relationship" relationship="rootViewController" id="ufM-JO-YUQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tUd-uf-P3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-259" y="352"/>
+        </scene>
+    </scenes>
+</document>
