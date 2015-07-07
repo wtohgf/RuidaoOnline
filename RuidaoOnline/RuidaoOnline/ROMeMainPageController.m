@@ -41,7 +41,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return 3;
+        return 1;
     }
     else if(section == 1)
     {
@@ -59,7 +59,7 @@
     if (indexPath.section == 0) {
         cell  = [tableView dequeueReusableCellWithIdentifier:@"MeCell" forIndexPath:indexPath];
         cell.imageView.image = [UIImage imageNamed:@"pic_checked"];
-        cell.textLabel.text = @"测试测试";
+        cell.textLabel.text = @"关于睿道";
     }else if(indexPath.section == 1){
         cell  = [tableView dequeueReusableCellWithIdentifier:@"MeCell" forIndexPath:indexPath];
         cell.imageView.image = [UIImage imageNamed:@"second_selected"];
@@ -70,6 +70,20 @@
     // Configure the cell...
     
     return cell;
+}
+
+#pragma mark 在用户点击了TableView的任意一行时调用这个代理方法
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //第一组 第一行
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        //方法1:使用导航控制器 push的方式切换
+//        UIStoryboard* story = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
+//        UIViewController* aboutRuiDao = [story instantiateViewControllerWithIdentifier:@"aboutRuidao"];
+//        [self.navigationController pushViewController:aboutRuiDao animated:YES];
+        
+        //方法2:使用Segue切换到其他界面
+        [self performSegueWithIdentifier:@"toAboutRuidao" sender:nil];
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{

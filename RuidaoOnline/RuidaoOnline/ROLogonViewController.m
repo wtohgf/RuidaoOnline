@@ -81,7 +81,7 @@
 }
 
 - (IBAction)logon:(UIButton *)sender {
-#ifdef DEBUG
+#ifndef DEBUG
     //切换window的根控制器
     [UIApplication sharedApplication].keyWindow.rootViewController = [[ROMainTabBarController alloc]init];
 #else

@@ -112,4 +112,37 @@ static RONetworkMngTool* tool;
     }];
 }
 
+
+-(void)RONetwork_GetPositionListView:(UIView *)view Result:(NetworkPositonListBlock)block{
+    
+    [MBProgressHUD showHUDAddedTo:view animated:YES];
+    
+    //向服务器发送登录请求
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager POST:RO_GETPOSTIONLIST parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        /* 没有登录的情况下 会反回一下信息
+         {
+         noLoginReturn =     {
+         msg = "\U8bf7\U5148\U767b\U5f55";
+         noLoginFlag = 0;
+         };
+         }
+        */
+        [MBProgressHUD hideHUDForView:view animated:YES];
+        if (block != nil) {
+            //将返回的字典转换为模型对象
+            
+           
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD hideHUDForView:view animated:YES];
+        [MBProgressHUD showDelayHUDToView:view messeage:@"可能网络原因 退出失败"];
+        if (block != nil) {
+            block(nil);
+        }
+    }];
+}
+
 @end

@@ -56,10 +56,31 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="我" id="1Dj-e7-Czo"/>
+                    <connections>
+                        <segue destination="82U-AF-sl6" kind="show" identifier="toAboutRuidao" id="e3L-Gy-69Q"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6p-cc-wfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="409" y="328"/>
+        </scene>
+        <!--关于睿道-->
+        <scene sceneID="UM5-4y-hSW">
+            <objects>
+                <viewController storyboardIdentifier="aboutRuidao" title="关于睿道" id="82U-AF-sl6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5I0-uz-kV6"/>
+                        <viewControllerLayoutGuide type="bottom" id="0jW-89-z3R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qRW-AW-6bn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zbh-sc-TvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152" y="335"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ow3-OJ-oxu">
