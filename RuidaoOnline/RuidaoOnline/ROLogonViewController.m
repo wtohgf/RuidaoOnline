@@ -108,6 +108,8 @@
                                          @"imgcode": _checkCode.text,
                                          };
             
+        
+            
             [[RONetworkMngTool sharedNetworkMngTool] RONetwork_LogonWithParameters:parameters View:self.view Result:^(NSString *flag) {
                 if ([flag isEqualToString:@"1"]) {
                     if (_saveUserPwdButton.selected == YES) {

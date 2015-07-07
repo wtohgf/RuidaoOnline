@@ -12,6 +12,8 @@
 		1D0E09141B40DEBE005B749F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0E09121B40DEBE005B749F /* Main.storyboard */; };
 		1D0E09161B40DEBE005B749F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D0E09151B40DEBE005B749F /* Images.xcassets */; };
 		1D0E09251B40DEBE005B749F /* RuidaoOnlineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0E09241B40DEBE005B749F /* RuidaoOnlineTests.m */; };
+		1D0F28D41B4B52C5009BCC97 /* ROLogoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F28D31B4B52C5009BCC97 /* ROLogoutTableViewCell.m */; };
+		1D0F28D81B4B735E009BCC97 /* ROLogoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0F28D71B4B735E009BCC97 /* ROLogoutModel.m */; };
 		1D114A791B4504F80077AECF /* ROLogRegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D114A781B4504F80077AECF /* ROLogRegViewController.m */; };
 		1D114A7D1B4512AE0077AECF /* ROLogonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D114A7C1B4512AE0077AECF /* ROLogonViewController.m */; };
 		1D114A821B4674C40077AECF /* MBProgressHUD+ROHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D114A811B4674C40077AECF /* MBProgressHUD+ROHUD.m */; };
@@ -48,6 +50,10 @@
 		1D0E091E1B40DEBE005B749F /* RuidaoOnlineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuidaoOnlineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0E09231B40DEBE005B749F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D0E09241B40DEBE005B749F /* RuidaoOnlineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuidaoOnlineTests.m; sourceTree = "<group>"; };
+		1D0F28D21B4B52C5009BCC97 /* ROLogoutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROLogoutTableViewCell.h; sourceTree = "<group>"; };
+		1D0F28D31B4B52C5009BCC97 /* ROLogoutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROLogoutTableViewCell.m; sourceTree = "<group>"; };
+		1D0F28D61B4B735E009BCC97 /* ROLogoutModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROLogoutModel.h; sourceTree = "<group>"; };
+		1D0F28D71B4B735E009BCC97 /* ROLogoutModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROLogoutModel.m; sourceTree = "<group>"; };
 		1D114A771B4504F80077AECF /* ROLogRegViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROLogRegViewController.h; sourceTree = "<group>"; };
 		1D114A781B4504F80077AECF /* ROLogRegViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROLogRegViewController.m; sourceTree = "<group>"; };
 		1D114A7B1B4512AE0077AECF /* ROLogonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROLogonViewController.h; sourceTree = "<group>"; };
@@ -158,6 +164,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1D0F28D11B4B5278009BCC97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D0F28D21B4B52C5009BCC97 /* ROLogoutTableViewCell.h */,
+				1D0F28D31B4B52C5009BCC97 /* ROLogoutTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1D0F28D51B4B7343009BCC97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D0F28D61B4B735E009BCC97 /* ROLogoutModel.h */,
+				1D0F28D71B4B735E009BCC97 /* ROLogoutModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		1D114A761B4504AE0077AECF /* LogonRegPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +285,8 @@
 		1D17F01A1B4A5ACE0047F5EC /* MeMainPage */ = {
 			isa = PBXGroup;
 			children = (
+				1D0F28D51B4B7343009BCC97 /* Models */,
+				1D0F28D11B4B5278009BCC97 /* Views */,
 				1D17F01B1B4A5B390047F5EC /* ROMeMainPageController.h */,
 				1D17F01C1B4A5B390047F5EC /* ROMeMainPageController.m */,
 			);
@@ -452,6 +478,7 @@
 			files = (
 				1D114A8A1B4784770077AECF /* RONetworkMngTool.m in Sources */,
 				1D0E090E1B40DEBE005B749F /* AppDelegate.m in Sources */,
+				1D0F28D81B4B735E009BCC97 /* ROLogoutModel.m in Sources */,
 				1D17F01D1B4A5B390047F5EC /* ROMeMainPageController.m in Sources */,
 				1D114A7D1B4512AE0077AECF /* ROLogonViewController.m in Sources */,
 				1D114A821B4674C40077AECF /* MBProgressHUD+ROHUD.m in Sources */,
@@ -460,6 +487,7 @@
 				1D114A791B4504F80077AECF /* ROLogRegViewController.m in Sources */,
 				1D17F0101B4A20680047F5EC /* ROMainTabBarController.m in Sources */,
 				1D114A861B47736E0077AECF /* ROLogonReturnModel.m in Sources */,
+				1D0F28D41B4B52C5009BCC97 /* ROLogoutTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

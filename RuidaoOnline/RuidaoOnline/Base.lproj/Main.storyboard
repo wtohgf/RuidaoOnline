@@ -296,7 +296,7 @@
         <!--Navigation Controller-->
         <scene sceneID="cIH-Iu-kIR">
             <objects>
-                <navigationController navigationBarHidden="YES" id="XbT-xY-CtR" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LogonNav" navigationBarHidden="YES" id="XbT-xY-CtR" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wJ6-rG-vYZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

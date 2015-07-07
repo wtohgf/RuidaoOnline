@@ -11,6 +11,7 @@
 #import <MBProgressHUD.h>
 #import "MBProgressHUD+ROHUD.h"
 #import "ROLogonReturnModel.h"
+#import "ROLogoutModel.h"
 
 static RONetworkMngTool* tool;
 
@@ -66,6 +67,45 @@ static RONetworkMngTool* tool;
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [MBProgressHUD hideHUDForView:view animated:YES];
         [MBProgressHUD showDelayHUDToView:view messeage:@"可能网络原因 登录失败"];
+        if (block != nil) {
+            block(@"0");
+        }
+    }];
+}
+
+-(void)RONetwork_LogoutView:(UIView *)view Result:(NetworkBlock)block{
+    
+    [MBProgressHUD showHUDAddedTo:view animated:YES];
+    
+    //向服务器发送登录请求
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager POST:RO_LOGOUT parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        [MBProgressHUD hideHUDForView:view animated:YES];
+        if (block != nil) {
+            
+            //将返回的字典转换为模型对象
+            ROLogoutModel* logoutModel = [ROLogoutModel logoutReturnModelWithDict:responseObject];
+            if (logoutModel != nil) {
+                if ([logoutModel.logoutFlag isEqualToString:@"1"]) {
+                    [MBProgressHUD showDelayHUDToView:view messeage:@"退出成功"];
+                    block(@"1");
+                }else{
+                    [MBProgressHUD showDelayHUDToView:view messeage:@"可能网络原因 退出失败"];
+                    block(@"0");
+                }
+            }
+            else
+            {
+                [MBProgressHUD showDelayHUDToView:view messeage:@"可能网络原因 退出失败"];
+                block(@"0");
+            }
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD hideHUDForView:view animated:YES];
+        [MBProgressHUD showDelayHUDToView:view messeage:@"可能网络原因 退出失败"];
         if (block != nil) {
             block(@"0");
         }

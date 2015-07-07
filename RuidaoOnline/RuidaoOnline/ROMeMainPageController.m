@@ -7,9 +7,12 @@
 //
 
 #import "ROMeMainPageController.h"
+#import "RONetworkMngTool.h"
 
 @interface ROMeMainPageController ()
+//@property (weak, nonatomic) IBOutlet UIButton *logoutbutton;
 
+- (IBAction)logout:(UIButton *)sender;
 
 @end
 
@@ -33,14 +36,10 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
     return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
     if (section == 0) {
         return 3;
     }
@@ -84,49 +83,37 @@
     return 44.f;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark 退出功能
+- (IBAction)logout:(UIButton *)sender {
+    UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"友情提示" message:@"您确认要退出吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
+    [alertView show];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    switch (buttonIndex) {
+        case 0:
+        {
+            //取消退出 不做任何操作
+        }
+            break;
+        case 1:
+        {
+            //登出操作 使用RONetworkMngTool
+            [[RONetworkMngTool sharedNetworkMngTool]RONetwork_LogoutView:self.view Result:^(NSString *flag) {
+                if ([flag isEqualToString:@"1"]) {
+                    //如果退出成功
+                    UIStoryboard* storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                    UIViewController* logonNav = [storyBoard instantiateViewControllerWithIdentifier:@"LogonNav"];
+                    //[UIApplication sharedApplication].keyWindow.rootViewController = logonNav;
+                    [UIApplication sharedApplication].delegate.window.rootViewController =  logonNav;
+                }
+            }];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

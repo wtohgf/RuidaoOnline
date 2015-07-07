@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ROMeMainPageController : UITableViewController
+@interface ROMeMainPageController : UITableViewController<UIAlertViewDelegate>
 
 @end
