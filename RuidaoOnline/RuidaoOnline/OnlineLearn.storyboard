@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="positionCell" id="XAt-Vt-Uyv">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="positionCell" id="XAt-Vt-Uyv" customClass="ROPositionTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XAt-Vt-Uyv" id="kO9-TA-naO">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -26,10 +26,39 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="在线学习" id="jpR-PJ-oLu"/>
+                    <connections>
+                        <segue destination="lsD-Xx-BOJ" kind="show" identifier="toDetailPosInfo" id="wkR-vw-Wfj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADw-wJ-XpG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="561" y="352"/>
+            <point key="canvasLocation" x="397" y="302"/>
+        </scene>
+        <!--岗位详细信息-->
+        <scene sceneID="3sL-Ag-ITs">
+            <objects>
+                <tableViewController title="岗位详细信息" id="lsD-Xx-BOJ" customClass="ROPosDetailController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="aP4-z8-NXx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fhw-3w-bTW">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fhw-3w-bTW" id="D76-PX-Pzz">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lsD-Xx-BOJ" id="x6d-qn-PSd"/>
+                            <outlet property="delegate" destination="lsD-Xx-BOJ" id="oap-oo-PoE"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s1D-hm-Bfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="306"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6oj-e0-1Gg">

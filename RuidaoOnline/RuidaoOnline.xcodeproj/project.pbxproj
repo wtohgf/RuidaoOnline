@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1D004B8F1B4CA3780087B1DC /* ROPostionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D004B8E1B4CA3780087B1DC /* ROPostionModel.m */; };
+		1D004B971B4CF3E90087B1DC /* ROPositionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D004B961B4CF3E90087B1DC /* ROPositionTableViewCell.m */; };
+		1D004B9A1B4CFB7D0087B1DC /* ROPosDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D004B991B4CFB7D0087B1DC /* ROPosDetailController.m */; };
 		1D0E090B1B40DEBE005B749F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0E090A1B40DEBE005B749F /* main.m */; };
 		1D0E090E1B40DEBE005B749F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0E090D1B40DEBE005B749F /* AppDelegate.m */; };
 		1D0E09141B40DEBE005B749F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0E09121B40DEBE005B749F /* Main.storyboard */; };
@@ -44,6 +46,10 @@
 		1CBE4DBB59F739A7148FFBF4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1D004B8D1B4CA3780087B1DC /* ROPostionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROPostionModel.h; sourceTree = "<group>"; };
 		1D004B8E1B4CA3780087B1DC /* ROPostionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROPostionModel.m; sourceTree = "<group>"; };
+		1D004B951B4CF3E90087B1DC /* ROPositionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROPositionTableViewCell.h; sourceTree = "<group>"; };
+		1D004B961B4CF3E90087B1DC /* ROPositionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROPositionTableViewCell.m; sourceTree = "<group>"; };
+		1D004B981B4CFB7D0087B1DC /* ROPosDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROPosDetailController.h; sourceTree = "<group>"; };
+		1D004B991B4CFB7D0087B1DC /* ROPosDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROPosDetailController.m; sourceTree = "<group>"; };
 		1D0E09051B40DEBE005B749F /* RuidaoOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuidaoOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0E09091B40DEBE005B749F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D0E090A1B40DEBE005B749F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +124,15 @@
 				1D004B8E1B4CA3780087B1DC /* ROPostionModel.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		1D004B941B4CF39E0087B1DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D004B951B4CF3E90087B1DC /* ROPositionTableViewCell.h */,
+				1D004B961B4CF3E90087B1DC /* ROPositionTableViewCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		1D0E08FC1B40DEBE005B749F = {
@@ -275,10 +290,13 @@
 		1D17F0111B4A4A640047F5EC /* OnLineLearn */ = {
 			isa = PBXGroup;
 			children = (
+				1D004B941B4CF39E0087B1DC /* Views */,
 				1D004B8C1B4CA34C0087B1DC /* Models */,
 				1D17F0141B4A4ACF0047F5EC /* OnlineLearn.storyboard */,
 				1D0F28D91B4BA601009BCC97 /* ROOnLineLearnController.h */,
 				1D0F28DA1B4BA601009BCC97 /* ROOnLineLearnController.m */,
+				1D004B981B4CFB7D0087B1DC /* ROPosDetailController.h */,
+				1D004B991B4CFB7D0087B1DC /* ROPosDetailController.m */,
 			);
 			name = OnLineLearn;
 			sourceTree = "<group>";
@@ -506,7 +524,9 @@
 				1D004B8F1B4CA3780087B1DC /* ROPostionModel.m in Sources */,
 				1D17F0101B4A20680047F5EC /* ROMainTabBarController.m in Sources */,
 				1D0F28DB1B4BA601009BCC97 /* ROOnLineLearnController.m in Sources */,
+				1D004B9A1B4CFB7D0087B1DC /* ROPosDetailController.m in Sources */,
 				1D114A861B47736E0077AECF /* ROLogonReturnModel.m in Sources */,
+				1D004B971B4CF3E90087B1DC /* ROPositionTableViewCell.m in Sources */,
 				1D0F28D41B4B52C5009BCC97 /* ROLogoutTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
