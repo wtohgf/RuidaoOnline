@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D004B8F1B4CA3780087B1DC /* ROPostionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D004B8E1B4CA3780087B1DC /* ROPostionModel.m */; };
 		1D0E090B1B40DEBE005B749F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0E090A1B40DEBE005B749F /* main.m */; };
 		1D0E090E1B40DEBE005B749F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0E090D1B40DEBE005B749F /* AppDelegate.m */; };
 		1D0E09141B40DEBE005B749F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0E09121B40DEBE005B749F /* Main.storyboard */; };
@@ -41,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		1CBE4DBB59F739A7148FFBF4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		1D004B8D1B4CA3780087B1DC /* ROPostionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROPostionModel.h; sourceTree = "<group>"; };
+		1D004B8E1B4CA3780087B1DC /* ROPostionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROPostionModel.m; sourceTree = "<group>"; };
 		1D0E09051B40DEBE005B749F /* RuidaoOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuidaoOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0E09091B40DEBE005B749F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D0E090A1B40DEBE005B749F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,6 +109,15 @@
 				983BF0FA4637723E476B3558 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		1D004B8C1B4CA34C0087B1DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D004B8D1B4CA3780087B1DC /* ROPostionModel.h */,
+				1D004B8E1B4CA3780087B1DC /* ROPostionModel.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		1D0E08FC1B40DEBE005B749F = {
@@ -263,6 +275,7 @@
 		1D17F0111B4A4A640047F5EC /* OnLineLearn */ = {
 			isa = PBXGroup;
 			children = (
+				1D004B8C1B4CA34C0087B1DC /* Models */,
 				1D17F0141B4A4ACF0047F5EC /* OnlineLearn.storyboard */,
 				1D0F28D91B4BA601009BCC97 /* ROOnLineLearnController.h */,
 				1D0F28DA1B4BA601009BCC97 /* ROOnLineLearnController.m */,
@@ -490,6 +503,7 @@
 				1D0E090B1B40DEBE005B749F /* main.m in Sources */,
 				1D7A4A061B423AEA005193F1 /* ROViewController.m in Sources */,
 				1D114A791B4504F80077AECF /* ROLogRegViewController.m in Sources */,
+				1D004B8F1B4CA3780087B1DC /* ROPostionModel.m in Sources */,
 				1D17F0101B4A20680047F5EC /* ROMainTabBarController.m in Sources */,
 				1D0F28DB1B4BA601009BCC97 /* ROOnLineLearnController.m in Sources */,
 				1D114A861B47736E0077AECF /* ROLogonReturnModel.m in Sources */,

@@ -12,6 +12,7 @@
 #import "MBProgressHUD+ROHUD.h"
 #import "ROLogonReturnModel.h"
 #import "ROLogoutModel.h"
+#import "ROPostionModel.h"
 
 static RONetworkMngTool* tool;
 
@@ -132,8 +133,21 @@ static RONetworkMngTool* tool;
         [MBProgressHUD hideHUDForView:view animated:YES];
         if (block != nil) {
             //将返回的字典转换为模型对象
+            NSArray* positionArray = [responseObject objectForKey:@"indexPositionList"];
+            //建立一个可变数组 用以保存所有的岗位模型
+            NSMutableArray* postArray = [NSMutableArray array];
             
-           
+            if (positionArray != nil) {
+                for (int index = 0; index < positionArray.count; index++) {
+                    NSDictionary* postDict = positionArray[index];
+                    //取得模型
+                    ROPostionModel* position = [ROPostionModel postionModelWithDict:postDict];
+                    //将模型逐一加入到可变数组中
+                    [postArray addObject:position];
+                }
+            }
+            //调用回调 将保存有所有岗位model的数组 作为参数返回给调用者
+            block(postArray);
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
