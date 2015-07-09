@@ -8,6 +8,9 @@
 
 #import "ROPosDetailController.h"
 #import <RDVTabBarController.h>
+#import "ROPositionHeaderCell.h"
+#import "ROCourseIntroduceCell.h"
+#import <UIImageView+AFNetworking.h>
 
 @interface ROPosDetailController ()
 
@@ -46,67 +49,64 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 2;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell* basecell = nil;
     
-    // Configure the cell...
+    if (indexPath.row == 0) {
+        ROPositionHeaderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"positionHeaderCell" forIndexPath:indexPath];
+        
+        cell.frame = CGRectMake(0.f, 0.f, [UIScreen mainScreen].bounds.size.width, CELLHEIGHT);
+        
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        // Configure the cell...
+        NSString* imageStr = _position.postUrl;
+        NSURL* imageURL = [NSURL URLWithString:imageStr];
+        [cell.postImageView setImageWithURL:imageURL];
+        //学习人数 从NSNumber向NSString转化
+        cell.studyPersonCount.text = [NSString stringWithFormat:@"%@", _position.personNums];
+        //课程数量
+        cell.courseCount.text = [NSString stringWithFormat:@"%@", _position.courseNums];
+        //学习时长
+        cell.studyTime.text = [NSString stringWithFormat:@"%@", _position.courseHours];
+        //是否学习过(NSNumber)
+        if ([_position.isStudy integerValue] == 0) {
+            cell.isLearn.text = @"否";
+        }else{
+            cell.isLearn.text = @"是";
+        }
+        basecell = cell;
+    }else if(indexPath.row == 1){
+        ROCourseIntroduceCell* cell = (ROCourseIntroduceCell*)[tableView dequeueReusableCellWithIdentifier:@"courseIntrCell" forIndexPath:indexPath];
+        //先设置模型
+        cell.postion = _position;
+        //再算Cell的frame
+        cell.frame = CGRectMake(0.f, 0.f, [UIScreen mainScreen].bounds.size.width, [ROCourseIntroduceCell cellHeightWithPostinModel:_position]);
+        
+        basecell = cell;
+    }
     
-    return cell;
+    return basecell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        return CELLHEIGHT;
+    }else if(indexPath.row == 1){
+        //返回可变的cell高度 需要根据模型的内容进行计算
+        return [ROCourseIntroduceCell cellHeightWithPostinModel:_position];
+    }else{
+        return 0;
+    }
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

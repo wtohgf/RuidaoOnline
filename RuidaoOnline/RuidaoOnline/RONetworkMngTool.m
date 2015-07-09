@@ -149,6 +149,7 @@ static RONetworkMngTool* tool;
             //调用回调 将保存有所有岗位model的数组 作为参数返回给调用者
             block(postArray);
         }
+
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [MBProgressHUD hideHUDForView:view animated:YES];
