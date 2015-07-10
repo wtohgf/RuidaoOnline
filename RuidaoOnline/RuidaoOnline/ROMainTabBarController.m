@@ -39,7 +39,6 @@
     UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
     UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
     NSArray *tabBarItemImages = @[@"first", @"second", @"third"];
-    
     NSArray *tabBarItemTitles = @[@"在线学习", @"在线测试", @"我"];
     
     RDVTabBar *tabBar = [self tabBar];
