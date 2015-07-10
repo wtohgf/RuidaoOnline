@@ -12,6 +12,7 @@
 #import "ROCourseIntroduceCell.h"
 #import <UIImageView+AFNetworking.h>
 #import "RONetworkMngTool.h"
+#import "ROLearnStageController.h"
 
 @interface ROPosDetailController ()
 
@@ -113,12 +114,15 @@
 
 #pragma mark 课程详细信息按钮的响应函数
 - (IBAction)courseDetail:(UIButton *)sender {
-    //测试获取详细课程的网络接口
-    NSDictionary* parameters = @{@"postid": _position.postId};
-    [[RONetworkMngTool sharedNetworkMngTool]RONetwork_GetCourseListParameters:parameters View:self.view Result:^(NSArray *courseList) {
-        ;
-    }];
     
+    //切换到岗位对应的详细课程界面
+    [self performSegueWithIdentifier:@"toLearnStage" sender:_position.postId];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    ROLearnStageController* learnStageController = segue.destinationViewController;
+    learnStageController.postId = sender;
 }
 
 @end

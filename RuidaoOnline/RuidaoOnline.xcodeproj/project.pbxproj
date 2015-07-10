@@ -34,6 +34,7 @@
 		1DF7887C1B4F638300BAB0B2 /* ROLearnStageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7887B1B4F638300BAB0B2 /* ROLearnStageModel.m */; };
 		1DF7887F1B4F63B200BAB0B2 /* ROChildStageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7887E1B4F63B200BAB0B2 /* ROChildStageModel.m */; };
 		1DF788821B4F63ED00BAB0B2 /* ROCourseResModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF788811B4F63ED00BAB0B2 /* ROCourseResModel.m */; };
+		1DF788851B4F993000BAB0B2 /* ROLearnStageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF788841B4F993000BAB0B2 /* ROLearnStageController.m */; };
 		8E1D37379A961E0F223C2DFD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA99A2FC18101785CC71CB9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,8 @@
 		1DF7887E1B4F63B200BAB0B2 /* ROChildStageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROChildStageModel.m; sourceTree = "<group>"; };
 		1DF788801B4F63ED00BAB0B2 /* ROCourseResModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROCourseResModel.h; sourceTree = "<group>"; };
 		1DF788811B4F63ED00BAB0B2 /* ROCourseResModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROCourseResModel.m; sourceTree = "<group>"; };
+		1DF788831B4F993000BAB0B2 /* ROLearnStageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROLearnStageController.h; sourceTree = "<group>"; };
+		1DF788841B4F993000BAB0B2 /* ROLearnStageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROLearnStageController.m; sourceTree = "<group>"; };
 		8AA99A2FC18101785CC71CB9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		983BF0FA4637723E476B3558 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -322,6 +325,8 @@
 				1D0F28DA1B4BA601009BCC97 /* ROOnLineLearnController.m */,
 				1D004B981B4CFB7D0087B1DC /* ROPosDetailController.h */,
 				1D004B991B4CFB7D0087B1DC /* ROPosDetailController.m */,
+				1DF788831B4F993000BAB0B2 /* ROLearnStageController.h */,
+				1DF788841B4F993000BAB0B2 /* ROLearnStageController.m */,
 			);
 			name = OnLineLearn;
 			sourceTree = "<group>";
@@ -549,6 +554,7 @@
 				1D114A821B4674C40077AECF /* MBProgressHUD+ROHUD.m in Sources */,
 				1D0E090B1B40DEBE005B749F /* main.m in Sources */,
 				1D7A4A061B423AEA005193F1 /* ROViewController.m in Sources */,
+				1DF788851B4F993000BAB0B2 /* ROLearnStageController.m in Sources */,
 				1D114A791B4504F80077AECF /* ROLogRegViewController.m in Sources */,
 				1D004B8F1B4CA3780087B1DC /* ROPostionModel.m in Sources */,
 				1D17F0101B4A20680047F5EC /* ROMainTabBarController.m in Sources */,
