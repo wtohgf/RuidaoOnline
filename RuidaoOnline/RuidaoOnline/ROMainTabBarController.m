@@ -49,10 +49,8 @@
     NSInteger index = 0;
     for (RDVTabBarItem *item in [[self tabBar] items]) {
         [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
-        UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",
-                                                      [tabBarItemImages objectAtIndex:index]]];
-        UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_normal",
-                                                        [tabBarItemImages objectAtIndex:index]]];
+        UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected", [tabBarItemImages objectAtIndex:index]]];
+        UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_normal", [tabBarItemImages objectAtIndex:index]]];
         [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
         item.title = tabBarItemTitles[index];
         index++;

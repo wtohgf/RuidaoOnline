@@ -85,7 +85,7 @@
         
         cih = intrRect.size.height;
     }
-    return cih+20.f+16.f;
+    return cih+30.f+24.f;
 }
 
 //设置模型 设置内容
@@ -96,6 +96,10 @@
     NSMutableString* courceIntroduce = [postion.postDesc mutableCopy];
     [courceIntroduce replaceOccurrencesOfString:@"&nbsp;" withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, courceIntroduce.length)];
     _courseIntroduce.text = courceIntroduce;
+    
+    //再算Cell的frame cell的frame发生了改变 就会触发layoutSubviews
+    self.frame = CGRectMake(0.f, 0.f, [UIScreen mainScreen].bounds.size.width, [ROCourseIntroduceCell cellHeightWithPostinModel:postion]);
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

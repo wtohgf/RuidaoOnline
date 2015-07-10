@@ -11,6 +11,7 @@
 #import "ROPositionHeaderCell.h"
 #import "ROCourseIntroduceCell.h"
 #import <UIImageView+AFNetworking.h>
+#import "RONetworkMngTool.h"
 
 @interface ROPosDetailController ()
 
@@ -53,7 +54,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 2;
+    return 3;
 }
 
 
@@ -84,12 +85,15 @@
         }
         basecell = cell;
     }else if(indexPath.row == 1){
+        //创建cell
         ROCourseIntroduceCell* cell = (ROCourseIntroduceCell*)[tableView dequeueReusableCellWithIdentifier:@"courseIntrCell" forIndexPath:indexPath];
-        //先设置模型
+        //给cell先设置数据模型 oc 点语法 实际上是调用setPostion
+        //[cell setPositon:_postion];
         cell.postion = _position;
-        //再算Cell的frame
-        cell.frame = CGRectMake(0.f, 0.f, [UIScreen mainScreen].bounds.size.width, [ROCourseIntroduceCell cellHeightWithPostinModel:_position]);
         
+        basecell = cell;
+    }else{
+        UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"courseDetailCell" forIndexPath:indexPath];
         basecell = cell;
     }
     
@@ -103,8 +107,18 @@
         //返回可变的cell高度 需要根据模型的内容进行计算
         return [ROCourseIntroduceCell cellHeightWithPostinModel:_position];
     }else{
-        return 0;
+        return 60.f;
     }
+}
+
+#pragma mark 课程详细信息按钮的响应函数
+- (IBAction)courseDetail:(UIButton *)sender {
+    //测试获取详细课程的网络接口
+    NSDictionary* parameters = @{@"postid": _position.postId};
+    [[RONetworkMngTool sharedNetworkMngTool]RONetwork_GetCourseListParameters:parameters View:self.view Result:^(NSArray *courseList) {
+        ;
+    }];
+    
 }
 
 @end

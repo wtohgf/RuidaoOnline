@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--在线学习主页-->
@@ -54,6 +55,31 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3X1-17-6bh" id="HTD-YQ-Ma4">
                                     <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="courseDetailCell" rowHeight="60" id="doF-6G-v6d">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="doF-6G-v6d" id="OSO-1I-OVt">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ag-uI-Zhd">
+                                            <rect key="frame" x="8" y="8" width="584" height="43"/>
+                                            <color key="backgroundColor" red="0.4431372549" green="0.88235294119999996" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="课程详细">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="courseDetail:" destination="lsD-Xx-BOJ" eventType="touchUpInside" id="NlB-Ks-CrC"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="8ag-uI-Zhd" secondAttribute="bottom" id="HrR-nK-eRK"/>
+                                        <constraint firstItem="8ag-uI-Zhd" firstAttribute="leading" secondItem="OSO-1I-OVt" secondAttribute="leadingMargin" id="MNq-g1-mP6"/>
+                                        <constraint firstItem="8ag-uI-Zhd" firstAttribute="top" secondItem="OSO-1I-OVt" secondAttribute="topMargin" id="dxf-R7-xfC"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8ag-uI-Zhd" secondAttribute="trailing" id="qAP-Yd-mVP"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

@@ -13,6 +13,7 @@
 #import "ROLogonReturnModel.h"
 #import "ROLogoutModel.h"
 #import "ROPostionModel.h"
+#import "ROLearnStageModel.h"
 
 static RONetworkMngTool* tool;
 
@@ -150,6 +151,40 @@ static RONetworkMngTool* tool;
             block(postArray);
         }
 
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD hideHUDForView:view animated:YES];
+        [MBProgressHUD showDelayHUDToView:view messeage:@"可能网络原因 退出失败"];
+        if (block != nil) {
+            block(nil);
+        }
+    }];
+}
+
+-(void)RONetwork_GetCourseListParameters:(NSDictionary*)parameters View:(UIView *)view Result:(NetworkCourseListBlock) block {
+    
+    [MBProgressHUD showHUDAddedTo:view animated:YES];
+    
+    //向服务器发送登录请求
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager POST:RO_GETCOURSELIST parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+ 
+        [MBProgressHUD hideHUDForView:view animated:YES];
+        if (block != nil) {
+            //将返回的字典转换为模型对象
+            NSMutableArray* learnStageList = [NSMutableArray array];
+            NSArray* postStageResList = [responseObject objectForKey:@"postStageResList"];
+            
+            if (postStageResList != nil) {
+                for (int index = 0; index<postStageResList.count; index++) {
+                    ROLearnStageModel* leranStage = [ROLearnStageModel learnStageModelWithDict:postStageResList[index]];
+                    [learnStageList addObject:leranStage];
+                }
+            }
+            //把学习阶段列表返回给调用者
+            block(learnStageList);
+        }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [MBProgressHUD hideHUDForView:view animated:YES];

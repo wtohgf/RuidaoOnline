@@ -19,9 +19,12 @@
 //获取岗位信息
 #define RO_GETPOSTIONLIST @"http://www.neuedu.cn/m/mobilePostInfo!findPostInfo.action"
 
+//获取岗位下关联课程
+#define RO_GETCOURSELIST @"http://www.neuedu.cn/m/mobilePostCourse!findPostCourse.action"
+
 typedef void (^NetworkBlock)(NSString* flag);
 typedef void (^NetworkPositonListBlock)(NSArray* posList);
-
+typedef void (^NetworkCourseListBlock)(NSArray* courseList);
 
 @interface RONetworkMngTool : NSObject
 //定义一个静态函数 返回工具单例对象
@@ -36,5 +39,8 @@ typedef void (^NetworkPositonListBlock)(NSArray* posList);
 
 //获取岗位信息
 -(void)RONetwork_GetPositionListView:(UIView*)view Result:(NetworkPositonListBlock) block;
+
+//获取岗位下关联课程
+-(void)RONetwork_GetCourseListParameters:(NSDictionary*)parameters View:(UIView *)view Result:(NetworkCourseListBlock) block;
 
 @end

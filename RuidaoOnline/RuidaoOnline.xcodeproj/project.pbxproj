@@ -31,6 +31,9 @@
 		1D17F0191B4A4AF50047F5EC /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D17F0181B4A4AF50047F5EC /* Me.storyboard */; };
 		1D17F01D1B4A5B390047F5EC /* ROMeMainPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D17F01C1B4A5B390047F5EC /* ROMeMainPageController.m */; };
 		1D7A4A061B423AEA005193F1 /* ROViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A4A051B423AEA005193F1 /* ROViewController.m */; };
+		1DF7887C1B4F638300BAB0B2 /* ROLearnStageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7887B1B4F638300BAB0B2 /* ROLearnStageModel.m */; };
+		1DF7887F1B4F63B200BAB0B2 /* ROChildStageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7887E1B4F63B200BAB0B2 /* ROChildStageModel.m */; };
+		1DF788821B4F63ED00BAB0B2 /* ROCourseResModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF788811B4F63ED00BAB0B2 /* ROCourseResModel.m */; };
 		8E1D37379A961E0F223C2DFD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA99A2FC18101785CC71CB9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +94,12 @@
 		1D17F01C1B4A5B390047F5EC /* ROMeMainPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROMeMainPageController.m; sourceTree = "<group>"; };
 		1D7A4A041B423AEA005193F1 /* ROViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROViewController.h; sourceTree = "<group>"; };
 		1D7A4A051B423AEA005193F1 /* ROViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROViewController.m; sourceTree = "<group>"; };
+		1DF7887A1B4F638300BAB0B2 /* ROLearnStageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROLearnStageModel.h; sourceTree = "<group>"; };
+		1DF7887B1B4F638300BAB0B2 /* ROLearnStageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROLearnStageModel.m; sourceTree = "<group>"; };
+		1DF7887D1B4F63B200BAB0B2 /* ROChildStageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROChildStageModel.h; sourceTree = "<group>"; };
+		1DF7887E1B4F63B200BAB0B2 /* ROChildStageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROChildStageModel.m; sourceTree = "<group>"; };
+		1DF788801B4F63ED00BAB0B2 /* ROCourseResModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROCourseResModel.h; sourceTree = "<group>"; };
+		1DF788811B4F63ED00BAB0B2 /* ROCourseResModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROCourseResModel.m; sourceTree = "<group>"; };
 		8AA99A2FC18101785CC71CB9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		983BF0FA4637723E476B3558 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +137,12 @@
 			children = (
 				1D004B8D1B4CA3780087B1DC /* ROPostionModel.h */,
 				1D004B8E1B4CA3780087B1DC /* ROPostionModel.m */,
+				1DF7887A1B4F638300BAB0B2 /* ROLearnStageModel.h */,
+				1DF7887B1B4F638300BAB0B2 /* ROLearnStageModel.m */,
+				1DF7887D1B4F63B200BAB0B2 /* ROChildStageModel.h */,
+				1DF7887E1B4F63B200BAB0B2 /* ROChildStageModel.m */,
+				1DF788801B4F63ED00BAB0B2 /* ROCourseResModel.h */,
+				1DF788811B4F63ED00BAB0B2 /* ROCourseResModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -523,9 +538,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D114A8A1B4784770077AECF /* RONetworkMngTool.m in Sources */,
+				1DF788821B4F63ED00BAB0B2 /* ROCourseResModel.m in Sources */,
 				1D0E090E1B40DEBE005B749F /* AppDelegate.m in Sources */,
 				1D0F28D81B4B735E009BCC97 /* ROLogoutModel.m in Sources */,
 				1D17F01D1B4A5B390047F5EC /* ROMeMainPageController.m in Sources */,
+				1DF7887F1B4F63B200BAB0B2 /* ROChildStageModel.m in Sources */,
 				1D004B9D1B4DF9CD0087B1DC /* ROPositionHeaderCell.m in Sources */,
 				1D004BA01B4E44AA0087B1DC /* ROCourseIntroduceCell.m in Sources */,
 				1D114A7D1B4512AE0077AECF /* ROLogonViewController.m in Sources */,
@@ -535,6 +552,7 @@
 				1D114A791B4504F80077AECF /* ROLogRegViewController.m in Sources */,
 				1D004B8F1B4CA3780087B1DC /* ROPostionModel.m in Sources */,
 				1D17F0101B4A20680047F5EC /* ROMainTabBarController.m in Sources */,
+				1DF7887C1B4F638300BAB0B2 /* ROLearnStageModel.m in Sources */,
 				1D0F28DB1B4BA601009BCC97 /* ROOnLineLearnController.m in Sources */,
 				1D004B9A1B4CFB7D0087B1DC /* ROPosDetailController.m in Sources */,
 				1D114A861B47736E0077AECF /* ROLogonReturnModel.m in Sources */,
