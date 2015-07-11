@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ROChapterSessionController : UITableViewController
+#import "ROBaseTableViewController.h"
+@interface ROChapterSessionController : ROBaseTableViewController
 @property (strong, nonatomic) NSNumber* courseid;
+@property (copy, nonatomic) NSString * courseName;
 @end

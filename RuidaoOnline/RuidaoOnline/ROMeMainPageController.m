@@ -36,18 +36,13 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
         return 1;
-    }
-    else if(section == 1)
-    {
-        return 5;
-    }
-    else{
+    }else{
         return 1;
     }
 }
@@ -60,10 +55,6 @@
         cell  = [tableView dequeueReusableCellWithIdentifier:@"MeCell" forIndexPath:indexPath];
         cell.imageView.image = [UIImage imageNamed:@"pic_checked"];
         cell.textLabel.text = @"关于睿道";
-    }else if(indexPath.section == 1){
-        cell  = [tableView dequeueReusableCellWithIdentifier:@"MeCell" forIndexPath:indexPath];
-        cell.imageView.image = [UIImage imageNamed:@"second_selected"];
-        cell.textLabel.text = @"测试测试111";
     }else{
         cell  = [tableView dequeueReusableCellWithIdentifier:@"LogoutCell" forIndexPath:indexPath];
     }
@@ -91,7 +82,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 2) {
+    if (indexPath.section == 1) {
         return 60.f;
     }
     return 44.f;

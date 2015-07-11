@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>rightAnswer</key>
+		<string>C</string>
+		<key>question</key>
+		<string>C语言中定义无符号整形使用一下那个关键字？</string>
+		<key>Answers</key>
+		<array>
+			<dict>
+				<key>index</key>
+				<string>A</string>
+				<key>content</key>
+				<string>char</string>
+			</dict>
+			<dict>
+				<key>index</key>
+				<string>B</string>
+				<key>content</key>
+				<string>int</string>
+			</dict>
+			<dict>
+				<key>index</key>
+				<string>C</string>
+				<key>content</key>
+				<string>unsigned int</string>
+			</dict>
+			<dict>
+				<key>index</key>
+				<string>D</string>
+				<key>content</key>
+				<string>float</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>rightAnswer</key>
+		<string>C</string>
+		<key>question</key>
+		<string>C语言中定义无符号整形使用一下那个关键字？</string>
+		<key>Answers</key>
+		<array>
+			<dict>
+				<key>index</key>
+				<string>A</string>
+				<key>content</key>
+				<string>char</string>
+			</dict>
+			<dict>
+				<key>index</key>
+				<string>B</string>
+				<key>content</key>
+				<string>int</string>
+			</dict>
+			<dict>
+				<key>index</key>
+				<string>C</string>
+				<key>content</key>
+				<string>unsigned int</string>
+			</dict>
+			<dict>
+				<key>index</key>
+				<string>D</string>
+				<key>content</key>
+				<string>float</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

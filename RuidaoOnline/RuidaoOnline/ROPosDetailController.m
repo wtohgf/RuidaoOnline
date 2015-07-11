@@ -29,18 +29,6 @@
     }
 }
 
-//隐藏tabBar
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self.rdv_tabBarController setTabBarHidden:YES];
-}
-
-//显示tabBar
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [self.rdv_tabBarController setTabBarHidden:NO];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

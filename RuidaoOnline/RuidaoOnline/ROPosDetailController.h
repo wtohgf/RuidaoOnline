@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ROPostionModel.h"
+#import "ROBaseTableViewController.h"
 
-@interface ROPosDetailController : UITableViewController
+@interface ROPosDetailController : ROBaseTableViewController
 @property (strong, nonatomic) ROPostionModel* position;
 @end

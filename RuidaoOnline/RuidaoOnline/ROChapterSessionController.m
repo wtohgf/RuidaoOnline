@@ -11,15 +11,21 @@
 #import "ROChapterModel.h"
 #import "ROSessionModel.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import <AFNetworkReachabilityManager.h>
+#import "MBProgressHUD+ROHUD.h"
 
 @interface ROChapterSessionController ()
 @property (strong, nonatomic) NSArray* chapterList;
+@property (strong, nonatomic) NSURL* playURL;
 @end
 
 @implementation ROChapterSessionController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (_courseName != nil) {
+        self.title = _courseName;
+    }
     NSDictionary* parameters = @{@"courseid": _courseid};
     [[RONetworkMngTool sharedNetworkMngTool] RONetwork_GetDetailCourseListParameters:parameters View:self.view Result:^(NSArray *detailcourseList) {
         ;
@@ -81,12 +87,47 @@
     ROChapterModel* chapter = _chapterList[indexPath.section];
     ROSessionModel* session = chapter.sessionList[indexPath.row];
     
-    //根据取得的对应小节的url进行在线视频播放学习
-    NSString* playURLString = session.url;
-    NSURL* playURL = [NSURL URLWithString:playURLString];
     
-    MPMoviePlayerViewController* player = [[MPMoviePlayerViewController alloc]initWithContentURL:playURL];
-    [self presentMoviePlayerViewControllerAnimated:player];
+    if ([AFNetworkReachabilityManager sharedManager].reachableViaWiFi) {
+        //根据取得的对应小节的url进行在线视频播放学习
+        NSString* playURLString = session.url;
+        NSURL* playURL = [NSURL URLWithString:playURLString];
+        
+        MPMoviePlayerViewController* player = [[MPMoviePlayerViewController alloc]initWithContentURL:playURL];
+        [self presentMoviePlayerViewControllerAnimated:player];
+    }else if( [AFNetworkReachabilityManager sharedManager].reachableViaWWAN){
+        NSString* playURLString = session.url;
+        NSURL* playURL = [NSURL URLWithString:playURLString];
+        _playURL = playURL;
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"当前WIFI未连接 会耗费流量" delegate:self cancelButtonTitle:@"不看了" otherButtonTitles:@"继续看", nil];
+        alert.delegate = self;
+        alert.tag = 111;
+        [alert show];
+        
+    }else{
+        [MBProgressHUD showDelayHUDToView:self.view messeage:@"网络链接错误 请检查网络"];
+    }
+
 }
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    switch (buttonIndex) {
+        case 0:
+            break;
+        case 1:
+        {
+            //继续观看视频
+            if (alertView.tag == 111) {
+                //根据取得的对应小节的url进行在线视频播放学习
+                MPMoviePlayerViewController* player = [[MPMoviePlayerViewController alloc]initWithContentURL:_playURL];
+                [self presentMoviePlayerViewControllerAnimated:player];
+            }
+            break;
+        default:
+            break;
+        }
+    }
+}
+
 
 @end

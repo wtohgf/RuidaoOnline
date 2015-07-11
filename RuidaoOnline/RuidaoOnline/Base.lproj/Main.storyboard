@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XbT-xY-CtR">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -220,15 +221,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qz-WL-ViL">
-                                <rect key="frame" x="248" y="213" width="85" height="30"/>
-                                <state key="normal" title="登录">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logon:" destination="6vD-xe-V6z" eventType="touchUpInside" id="Rjj-i2-Ww9"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DUm-Fb-sBr">
                                 <rect key="frame" x="406" y="160" width="41" height="30"/>
                                 <constraints>
@@ -238,14 +230,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSF-jo-RBh">
-                                <rect key="frame" x="210" y="240" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSF-jo-RBh">
+                                <rect key="frame" x="210" y="210" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="C5Q-fP-Qea"/>
+                                    <constraint firstAttribute="height" constant="30" id="gwl-7u-jxF"/>
+                                </constraints>
                                 <state key="normal" image="pic_unchecked">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="pic_checked"/>
                                 <connections>
                                     <action selector="saveUserPwd:" destination="6vD-xe-V6z" eventType="touchDown" id="Jq1-ja-Dav"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qz-WL-ViL">
+                                <rect key="frame" x="248" y="210" width="147" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8SD-7R-cJx"/>
+                                    <constraint firstAttribute="width" constant="147" id="fww-HI-fQL"/>
+                                </constraints>
+                                <state key="normal" title="登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logon:" destination="6vD-xe-V6z" eventType="touchUpInside" id="Rjj-i2-Ww9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -260,19 +269,23 @@
                             <constraint firstItem="OVZ-KU-xDQ" firstAttribute="height" secondItem="KLs-EY-rbW" secondAttribute="height" id="95v-Vz-S4q"/>
                             <constraint firstItem="q03-PG-3cc" firstAttribute="leading" secondItem="OVZ-KU-xDQ" secondAttribute="trailing" id="Akv-Pt-Ejc"/>
                             <constraint firstItem="OVZ-KU-xDQ" firstAttribute="leading" secondItem="KLs-EY-rbW" secondAttribute="leading" id="B4r-hm-YuB"/>
+                            <constraint firstItem="TSF-jo-RBh" firstAttribute="top" secondItem="1Qz-WL-ViL" secondAttribute="top" id="CWI-ph-qqq"/>
                             <constraint firstItem="q03-PG-3cc" firstAttribute="height" secondItem="SJA-HV-NWw" secondAttribute="height" id="DaO-JX-Qz5"/>
                             <constraint firstItem="Dzq-ci-ZKv" firstAttribute="leading" secondItem="SJA-HV-NWw" secondAttribute="leading" id="DiV-db-hIP"/>
                             <constraint firstItem="q03-PG-3cc" firstAttribute="top" secondItem="OVZ-KU-xDQ" secondAttribute="top" id="H5p-kf-ggM"/>
                             <constraint firstItem="KLs-EY-rbW" firstAttribute="height" secondItem="ahU-zP-oSJ" secondAttribute="height" id="LcF-bJ-GnE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="q03-PG-3cc" secondAttribute="trailing" constant="60" id="Pyh-58-biV"/>
+                            <constraint firstItem="1Qz-WL-ViL" firstAttribute="leading" secondItem="TSF-jo-RBh" secondAttribute="trailing" constant="8" id="R2m-EQ-61B"/>
                             <constraint firstItem="Dzq-ci-ZKv" firstAttribute="width" secondItem="SJA-HV-NWw" secondAttribute="width" id="Uoa-qV-wGt"/>
                             <constraint firstItem="SJA-HV-NWw" firstAttribute="top" secondItem="q03-PG-3cc" secondAttribute="bottom" constant="18" id="YAn-V1-ITS"/>
                             <constraint firstItem="q03-PG-3cc" firstAttribute="leading" secondItem="SJA-HV-NWw" secondAttribute="leading" id="aWv-4W-BCP"/>
+                            <constraint firstItem="TSF-jo-RBh" firstAttribute="top" secondItem="Dzq-ci-ZKv" secondAttribute="bottom" constant="20" id="cqp-Y9-TXg"/>
                             <constraint firstItem="DUm-Fb-sBr" firstAttribute="top" secondItem="Dzq-ci-ZKv" secondAttribute="top" id="dPQ-Ic-M5v"/>
                             <constraint firstItem="SJA-HV-NWw" firstAttribute="top" secondItem="KLs-EY-rbW" secondAttribute="top" id="e4U-lg-9gS"/>
                             <constraint firstItem="DUm-Fb-sBr" firstAttribute="leading" secondItem="Dzq-ci-ZKv" secondAttribute="trailing" constant="16" id="e7Z-oc-5jU"/>
                             <constraint firstItem="OVZ-KU-xDQ" firstAttribute="width" secondItem="KLs-EY-rbW" secondAttribute="width" id="geZ-gK-6Dl"/>
                             <constraint firstAttribute="centerX" secondItem="q03-PG-3cc" secondAttribute="centerX" id="jvU-Hs-cGG"/>
+                            <constraint firstItem="TSF-jo-RBh" firstAttribute="leading" secondItem="Dzq-ci-ZKv" secondAttribute="leading" id="sDv-xh-L0C"/>
                             <constraint firstItem="Dzq-ci-ZKv" firstAttribute="top" secondItem="ahU-zP-oSJ" secondAttribute="top" id="zg6-Hr-NSH"/>
                         </constraints>
                         <variation key="default">

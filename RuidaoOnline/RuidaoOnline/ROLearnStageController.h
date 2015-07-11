@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ROLearnStageController : UITableViewController
+#import "ROBaseTableViewController.h"
+@interface ROLearnStageController : ROBaseTableViewController
 @property (copy, nonatomic) NSString * postId;
 @end

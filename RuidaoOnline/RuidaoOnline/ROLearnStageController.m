@@ -98,7 +98,7 @@
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
    
     UILabel* label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 30.f)];
-    label.backgroundColor = [UIColor lightGrayColor];
+    label.backgroundColor = [UIColor purpleColor];
     //通过section 从学习阶段列表_courseList 取得对应的学习阶段模型
     ROLearnStageModel* learnStage = _courseList[section];
     //遍历学习阶段模型中的子阶段childStageList
@@ -111,7 +111,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     //通过section 从学习阶段列表_courseList 取得对应的学习阶段模型
     ROLearnStageModel* learnStage = _courseList[indexPath.section];
     //遍历学习阶段模型中的子阶段childStageList
@@ -120,13 +119,16 @@
     ROCourseResModel* courseRes = childStage.childStageResList[indexPath.row];
     
     //界面切换
-    [self performSegueWithIdentifier:@"toChapterPage" sender:courseRes.resId];
+    [self performSegueWithIdentifier:@"toChapterPage" sender:courseRes];
 
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
     ROChapterSessionController* cscontroller = segue.destinationViewController;
-    cscontroller.courseid = sender;
+    ROCourseResModel* courseRes = sender;
+    cscontroller.courseid = courseRes.resId;
+    cscontroller.courseName = courseRes.resName;
 }
 
 

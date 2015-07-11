@@ -139,4 +139,10 @@
     sender.selected = !sender.selected;
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [_checkCode resignFirstResponder];
+    [_userName resignFirstResponder];
+    [_passWord resignFirstResponder];
+}
+
 @end
