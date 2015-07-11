@@ -11,6 +11,7 @@
 #import "ROChildStageModel.h"
 #import "ROLearnStageModel.h"
 #import "ROCourseResModel.h"
+#include "ROChapterSessionController.h"
 
 @interface ROLearnStageController ()
 @property (strong, nonatomic) NSArray* courseList;
@@ -94,6 +95,21 @@
     return title;
 }
 
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+   
+    UILabel* label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 30.f)];
+    label.backgroundColor = [UIColor lightGrayColor];
+    //通过section 从学习阶段列表_courseList 取得对应的学习阶段模型
+    ROLearnStageModel* learnStage = _courseList[section];
+    //遍历学习阶段模型中的子阶段childStageList
+    ROChildStageModel* childStage = [learnStage.childStageList firstObject];
+    
+    NSString* title = [NSString stringWithFormat:@"%@-%@", learnStage.parentStageName, childStage.stageName];
+    label.text = title;
+    label.textColor = [UIColor whiteColor];
+    return label;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     //通过section 从学习阶段列表_courseList 取得对应的学习阶段模型
@@ -103,12 +119,14 @@
     //通过index.row 返回的行号 作为索引找到对应行的课程资源模型
     ROCourseResModel* courseRes = childStage.childStageResList[indexPath.row];
     
-    NSDictionary* parameters = @{@"courseid": courseRes.resId};
-    
-    [[RONetworkMngTool sharedNetworkMngTool] RONetwork_GetDetailCourseListParameters:parameters View:self.view Result:^(NSArray *detailcourseList) {
-        ;
-    }];
-    
+    //界面切换
+    [self performSegueWithIdentifier:@"toChapterPage" sender:courseRes.resId];
+
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    ROChapterSessionController* cscontroller = segue.destinationViewController;
+    cscontroller.courseid = sender;
 }
 
 

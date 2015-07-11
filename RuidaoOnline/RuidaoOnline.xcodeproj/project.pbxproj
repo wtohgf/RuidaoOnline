@@ -37,6 +37,7 @@
 		1DF788851B4F993000BAB0B2 /* ROLearnStageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF788841B4F993000BAB0B2 /* ROLearnStageController.m */; };
 		1DF788881B509DC100BAB0B2 /* ROChapterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF788871B509DC100BAB0B2 /* ROChapterModel.m */; };
 		1DF7888B1B509DDF00BAB0B2 /* ROSessionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7888A1B509DDF00BAB0B2 /* ROSessionModel.m */; };
+		1DF7888E1B50ACB800BAB0B2 /* ROChapterSessionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7888D1B50ACB800BAB0B2 /* ROChapterSessionController.m */; };
 		8E1D37379A961E0F223C2DFD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA99A2FC18101785CC71CB9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,8 @@
 		1DF788871B509DC100BAB0B2 /* ROChapterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROChapterModel.m; sourceTree = "<group>"; };
 		1DF788891B509DDF00BAB0B2 /* ROSessionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROSessionModel.h; sourceTree = "<group>"; };
 		1DF7888A1B509DDF00BAB0B2 /* ROSessionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROSessionModel.m; sourceTree = "<group>"; };
+		1DF7888C1B50ACB800BAB0B2 /* ROChapterSessionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROChapterSessionController.h; sourceTree = "<group>"; };
+		1DF7888D1B50ACB800BAB0B2 /* ROChapterSessionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROChapterSessionController.m; sourceTree = "<group>"; };
 		8AA99A2FC18101785CC71CB9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		983BF0FA4637723E476B3558 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -337,6 +340,8 @@
 				1D004B991B4CFB7D0087B1DC /* ROPosDetailController.m */,
 				1DF788831B4F993000BAB0B2 /* ROLearnStageController.h */,
 				1DF788841B4F993000BAB0B2 /* ROLearnStageController.m */,
+				1DF7888C1B50ACB800BAB0B2 /* ROChapterSessionController.h */,
+				1DF7888D1B50ACB800BAB0B2 /* ROChapterSessionController.m */,
 			);
 			name = OnLineLearn;
 			sourceTree = "<group>";
@@ -569,6 +574,7 @@
 				1D114A791B4504F80077AECF /* ROLogRegViewController.m in Sources */,
 				1D004B8F1B4CA3780087B1DC /* ROPostionModel.m in Sources */,
 				1D17F0101B4A20680047F5EC /* ROMainTabBarController.m in Sources */,
+				1DF7888E1B50ACB800BAB0B2 /* ROChapterSessionController.m in Sources */,
 				1DF7887C1B4F638300BAB0B2 /* ROLearnStageModel.m in Sources */,
 				1D0F28DB1B4BA601009BCC97 /* ROOnLineLearnController.m in Sources */,
 				1D004B9A1B4CFB7D0087B1DC /* ROPosDetailController.m in Sources */,
@@ -703,7 +709,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "bc6f3e50-11a2-478a-98e4-389076860de9";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -720,7 +726,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "bc6f3e50-11a2-478a-98e4-389076860de9";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
