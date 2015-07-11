@@ -37,34 +37,34 @@
 	</dict>
 	<dict>
 		<key>rightAnswer</key>
-		<string>C</string>
+		<string>B</string>
 		<key>question</key>
-		<string>C语言中定义无符号整形使用一下那个关键字？</string>
+		<string>C语言中定义结构体使用？</string>
 		<key>Answers</key>
 		<array>
 			<dict>
 				<key>index</key>
 				<string>A</string>
 				<key>content</key>
-				<string>char</string>
+				<string>union</string>
 			</dict>
 			<dict>
 				<key>index</key>
 				<string>B</string>
 				<key>content</key>
-				<string>int</string>
+				<string>struct</string>
 			</dict>
 			<dict>
 				<key>index</key>
 				<string>C</string>
 				<key>content</key>
-				<string>unsigned int</string>
+				<string>typedef</string>
 			</dict>
 			<dict>
 				<key>index</key>
 				<string>D</string>
 				<key>content</key>
-				<string>float</string>
+				<string>class</string>
 			</dict>
 		</array>
 	</dict>

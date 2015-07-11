@@ -32,8 +32,8 @@
     _curSelectedIndex = 0;
     
     [self.tableView reloadData];
-    NSString* rigthBarButtonTitle = [NSString stringWithFormat:@"答题进度1/%d", _questionList.count];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:rigthBarButtonTitle style:UIBarButtonItemStyleBordered target:nil action:nil];
+    NSString* rigthBarButtonTitle = [NSString stringWithFormat:@"答题进度1/%ld", _questionList.count];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:rigthBarButtonTitle style:UIBarButtonItemStylePlain target:nil action:nil];
     
     _answerList = [NSMutableArray array];
 }
@@ -109,7 +109,7 @@
         return;
     }
     
-    NSString* rigthBarButtonTitle = [NSString stringWithFormat:@"答题进度%d/%d", _curQuestionIndex+1, _questionList.count];
+    NSString* rigthBarButtonTitle = [NSString stringWithFormat:@"答题进度%ld/%ld", _curQuestionIndex+1, _questionList.count];
     self.navigationItem.rightBarButtonItem.title = rigthBarButtonTitle;
     
     NSString* answer = _answerList[_curQuestionIndex];
@@ -142,7 +142,7 @@
         UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您确定要提交?" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
         [alertView show];
     }
-    NSString* rigthBarButtonTitle = [NSString stringWithFormat:@"答题进度%d/%d", _curQuestionIndex+1, _questionList.count];
+    NSString* rigthBarButtonTitle = [NSString stringWithFormat:@"答题进度%ld/%ld", _curQuestionIndex+1, _questionList.count];
     self.navigationItem.rightBarButtonItem.title = rigthBarButtonTitle;
     
     [self.tableView reloadData];
@@ -168,7 +168,7 @@
                 }
             }
             
-            NSString* scoreMsg = [NSString stringWithFormat:@"您共答对%d道题目 正确率为%.2f%%",rightCount, rightCount*100.f/_questionList.count];
+            NSString* scoreMsg = [NSString stringWithFormat:@"您共答对%ld道题目 正确率为%.2f%%",rightCount, rightCount*100.f/_questionList.count];
             UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"得分情况" message:scoreMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
         }

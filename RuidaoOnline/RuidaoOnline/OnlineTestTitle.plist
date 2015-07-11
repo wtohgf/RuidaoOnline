@@ -3,9 +3,5 @@
 <plist version="1.0">
 <array>
 	<string>C语言测试</string>
-	<string>C++测试</string>
-	<string>iOS测试</string>
-	<string>Android测试</string>
-	<string>Java测试</string>
 </array>
 </plist>
