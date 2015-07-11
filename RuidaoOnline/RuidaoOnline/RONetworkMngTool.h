@@ -22,9 +22,13 @@
 //获取岗位下关联课程
 #define RO_GETCOURSELIST @"http://www.neuedu.cn/m/mobilePostCourse!findPostCourse.action"
 
+//获取课程列表
+#define RO_GETDETAILCOURSELIST @"http://www.neuedu.cn/m/mobileCourseInfo!findMoreMcourses.action"
+
 typedef void (^NetworkBlock)(NSString* flag);
 typedef void (^NetworkPositonListBlock)(NSArray* posList);
 typedef void (^NetworkCourseListBlock)(NSArray* courseList);
+typedef void (^NetworkDetailCourseListBlock)(NSArray* detailcourseList);
 
 @interface RONetworkMngTool : NSObject
 //定义一个静态函数 返回工具单例对象
@@ -42,5 +46,8 @@ typedef void (^NetworkCourseListBlock)(NSArray* courseList);
 
 //获取岗位下关联课程
 -(void)RONetwork_GetCourseListParameters:(NSDictionary*)parameters View:(UIView *)view Result:(NetworkCourseListBlock) block;
+
+//获取课程列表
+-(void)RONetwork_GetDetailCourseListParameters:(NSDictionary*)parameters View:(UIView *)view Result:(NetworkDetailCourseListBlock) block;
 
 @end

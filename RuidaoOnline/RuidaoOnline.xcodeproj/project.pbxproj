@@ -35,6 +35,8 @@
 		1DF7887F1B4F63B200BAB0B2 /* ROChildStageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7887E1B4F63B200BAB0B2 /* ROChildStageModel.m */; };
 		1DF788821B4F63ED00BAB0B2 /* ROCourseResModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF788811B4F63ED00BAB0B2 /* ROCourseResModel.m */; };
 		1DF788851B4F993000BAB0B2 /* ROLearnStageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF788841B4F993000BAB0B2 /* ROLearnStageController.m */; };
+		1DF788881B509DC100BAB0B2 /* ROChapterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF788871B509DC100BAB0B2 /* ROChapterModel.m */; };
+		1DF7888B1B509DDF00BAB0B2 /* ROSessionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7888A1B509DDF00BAB0B2 /* ROSessionModel.m */; };
 		8E1D37379A961E0F223C2DFD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA99A2FC18101785CC71CB9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,10 @@
 		1DF788811B4F63ED00BAB0B2 /* ROCourseResModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROCourseResModel.m; sourceTree = "<group>"; };
 		1DF788831B4F993000BAB0B2 /* ROLearnStageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROLearnStageController.h; sourceTree = "<group>"; };
 		1DF788841B4F993000BAB0B2 /* ROLearnStageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROLearnStageController.m; sourceTree = "<group>"; };
+		1DF788861B509DC100BAB0B2 /* ROChapterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROChapterModel.h; sourceTree = "<group>"; };
+		1DF788871B509DC100BAB0B2 /* ROChapterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROChapterModel.m; sourceTree = "<group>"; };
+		1DF788891B509DDF00BAB0B2 /* ROSessionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROSessionModel.h; sourceTree = "<group>"; };
+		1DF7888A1B509DDF00BAB0B2 /* ROSessionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROSessionModel.m; sourceTree = "<group>"; };
 		8AA99A2FC18101785CC71CB9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		983BF0FA4637723E476B3558 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +152,10 @@
 				1DF7887E1B4F63B200BAB0B2 /* ROChildStageModel.m */,
 				1DF788801B4F63ED00BAB0B2 /* ROCourseResModel.h */,
 				1DF788811B4F63ED00BAB0B2 /* ROCourseResModel.m */,
+				1DF788861B509DC100BAB0B2 /* ROChapterModel.h */,
+				1DF788871B509DC100BAB0B2 /* ROChapterModel.m */,
+				1DF788891B509DDF00BAB0B2 /* ROSessionModel.h */,
+				1DF7888A1B509DDF00BAB0B2 /* ROSessionModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -551,6 +561,7 @@
 				1D004B9D1B4DF9CD0087B1DC /* ROPositionHeaderCell.m in Sources */,
 				1D004BA01B4E44AA0087B1DC /* ROCourseIntroduceCell.m in Sources */,
 				1D114A7D1B4512AE0077AECF /* ROLogonViewController.m in Sources */,
+				1DF7888B1B509DDF00BAB0B2 /* ROSessionModel.m in Sources */,
 				1D114A821B4674C40077AECF /* MBProgressHUD+ROHUD.m in Sources */,
 				1D0E090B1B40DEBE005B749F /* main.m in Sources */,
 				1D7A4A061B423AEA005193F1 /* ROViewController.m in Sources */,
@@ -561,6 +572,7 @@
 				1DF7887C1B4F638300BAB0B2 /* ROLearnStageModel.m in Sources */,
 				1D0F28DB1B4BA601009BCC97 /* ROOnLineLearnController.m in Sources */,
 				1D004B9A1B4CFB7D0087B1DC /* ROPosDetailController.m in Sources */,
+				1DF788881B509DC100BAB0B2 /* ROChapterModel.m in Sources */,
 				1D114A861B47736E0077AECF /* ROLogonReturnModel.m in Sources */,
 				1D004B971B4CF3E90087B1DC /* ROPositionTableViewCell.m in Sources */,
 				1D0F28D41B4B52C5009BCC97 /* ROLogoutTableViewCell.m in Sources */,

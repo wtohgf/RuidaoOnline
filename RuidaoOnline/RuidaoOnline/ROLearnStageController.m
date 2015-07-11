@@ -94,5 +94,22 @@
     return title;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //通过section 从学习阶段列表_courseList 取得对应的学习阶段模型
+    ROLearnStageModel* learnStage = _courseList[indexPath.section];
+    //遍历学习阶段模型中的子阶段childStageList
+    ROChildStageModel* childStage = [learnStage.childStageList firstObject];
+    //通过index.row 返回的行号 作为索引找到对应行的课程资源模型
+    ROCourseResModel* courseRes = childStage.childStageResList[indexPath.row];
+    
+    NSDictionary* parameters = @{@"courseid": courseRes.resId};
+    
+    [[RONetworkMngTool sharedNetworkMngTool] RONetwork_GetDetailCourseListParameters:parameters View:self.view Result:^(NSArray *detailcourseList) {
+        ;
+    }];
+    
+}
+
 
 @end

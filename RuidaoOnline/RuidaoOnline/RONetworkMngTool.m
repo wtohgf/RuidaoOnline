@@ -14,6 +14,7 @@
 #import "ROLogoutModel.h"
 #import "ROPostionModel.h"
 #import "ROLearnStageModel.h"
+#import "ROChapterModel.h"
 
 static RONetworkMngTool* tool;
 
@@ -194,5 +195,39 @@ static RONetworkMngTool* tool;
         }
     }];
 }
+
+-(void)RONetwork_GetDetailCourseListParameters:(NSDictionary*)parameters View:(UIView *)view Result:(NetworkDetailCourseListBlock) block {
+    
+    [MBProgressHUD showHUDAddedTo:view animated:YES];
+    
+    //向服务器发送登录请求
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager POST:RO_GETDETAILCOURSELIST parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        [MBProgressHUD hideHUDForView:view animated:YES];
+        if (block != nil) {
+            //将返回的字典转换为模型对象
+            NSMutableArray* chapterList = [NSMutableArray array];
+            NSArray* chapterDictList = [responseObject objectForKey:@"courseList"];
+            
+            for (int index=0; index<chapterDictList.count; index++) {
+                ROChapterModel* chapter = [ROChapterModel chapterModelWithDict:chapterDictList[index]];
+                [chapterList addObject:chapter];
+            }
+            
+            //把章节列表返回给调用者
+            block(chapterList);
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD hideHUDForView:view animated:YES];
+        [MBProgressHUD showDelayHUDToView:view messeage:@"可能网络原因 退出失败"];
+        if (block != nil) {
+            block(nil);
+        }
+    }];
+}
+
 
 @end
