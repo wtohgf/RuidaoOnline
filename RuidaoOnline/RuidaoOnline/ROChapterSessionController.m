@@ -7,7 +7,7 @@
 //
 
 #import "ROChapterSessionController.h"
-#include "RONetworkMngTool.h"
+#import "RONetworkMngTool.h"
 #import "ROChapterModel.h"
 #import "ROSessionModel.h"
 #import <MediaPlayer/MediaPlayer.h>
