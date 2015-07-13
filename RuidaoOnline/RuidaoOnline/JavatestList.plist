@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>rightAnswer</key>
+		<string>B</string>
+		<key>question</key>
+		<string>在调用方法时，若要使方法改变实参的值，可以</string>
+		<key>Answers</key>
+		<array>
+			<dict>
+				<key>index</key>
+				<string>A</string>
+				<key>content</key>
+				<string>用基本数据类型作为参数</string>
+			</dict>
+			<dict>
+				<key>index</key>
+				<string>B</string>
+				<key>content</key>
+				<string>用对象作为参数</string>
+			</dict>
+			<dict>
+				<key>index</key>
+				<string>C</string>
+				<key>content</key>
+				<string>A和B都对</string>
+			</dict>
+			<dict>
+				<key>index</key>
+				<string>D</string>
+				<key>content</key>
+				<string>A和B都不对</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>rightAnswer</key>
+		<string>D</string>
+		<key>question</key>
+		<string>Java application中的主类需包含main方法，main方法的返回类型是什么？</string>
+		<key>Answers</key>
+		<array>
+			<dict>
+				<key>index</key>
+				<string>A</string>
+				<key>content</key>
+				<string>char</string>
+			</dict>
+			<dict>
+				<key>index</key>
+				<string>B</string>
+				<key>content</key>
+				<string>int</string>
+			</dict>
+			<dict>
+				<key>index</key>
+				<string>C</string>
+				<key>content</key>
+				<string>unsigned int</string>
+			</dict>
+			<dict>
+				<key>index</key>
+				<string>D</string>
+				<key>content</key>
+				<string>void</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

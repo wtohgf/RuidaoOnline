@@ -26,7 +26,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString* path = [[NSBundle mainBundle]pathForResource:@"CTestList.plist" ofType:nil];
+    
+    self.title = [_testTitle objectForKey:@"title"];
+    
+    NSString* path = [[NSBundle mainBundle]pathForResource:[_testTitle objectForKey:@"fileName"] ofType:nil];
     _questionList = [NSArray arrayWithContentsOfFile:path];
     _curQuestionIndex = 0;
     _curSelectedIndex = 0;

@@ -2,6 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>C语言测试</string>
+	<dict>
+		<key>title</key>
+		<string>C语言测试</string>
+		<key>fileName</key>
+		<string>CTestList.plist</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>C++测试</string>
+		<key>fileName</key>
+		<string>CppTestList.plist</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Java测试</string>
+		<key>fileName</key>
+		<string>JavatestList.plist</string>
+	</dict>
 </array>
 </plist>

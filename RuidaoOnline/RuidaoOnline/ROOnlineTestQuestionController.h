@@ -10,5 +10,5 @@
 #import "ROBaseTableViewController.h"
 
 @interface ROOnlineTestQuestionController :ROBaseTableViewController<UIAlertViewDelegate>
-
+@property (strong, nonatomic) NSDictionary* testTitle;
 @end

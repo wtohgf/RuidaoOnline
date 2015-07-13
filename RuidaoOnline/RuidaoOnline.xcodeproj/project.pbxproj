@@ -31,6 +31,8 @@
 		1D17F0191B4A4AF50047F5EC /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D17F0181B4A4AF50047F5EC /* Me.storyboard */; };
 		1D17F01D1B4A5B390047F5EC /* ROMeMainPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D17F01C1B4A5B390047F5EC /* ROMeMainPageController.m */; };
 		1D7A4A061B423AEA005193F1 /* ROViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A4A051B423AEA005193F1 /* ROViewController.m */; };
+		1DDCB4821B53866A004C0278 /* CppTestList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DDCB4811B53866A004C0278 /* CppTestList.plist */; };
+		1DDCB4841B5386AA004C0278 /* JavatestList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DDCB4831B5386AA004C0278 /* JavatestList.plist */; };
 		1DF7887C1B4F638300BAB0B2 /* ROLearnStageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7887B1B4F638300BAB0B2 /* ROLearnStageModel.m */; };
 		1DF7887F1B4F63B200BAB0B2 /* ROChildStageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7887E1B4F63B200BAB0B2 /* ROChildStageModel.m */; };
 		1DF788821B4F63ED00BAB0B2 /* ROCourseResModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF788811B4F63ED00BAB0B2 /* ROCourseResModel.m */; };
@@ -108,6 +110,8 @@
 		1D17F01C1B4A5B390047F5EC /* ROMeMainPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROMeMainPageController.m; sourceTree = "<group>"; };
 		1D7A4A041B423AEA005193F1 /* ROViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROViewController.h; sourceTree = "<group>"; };
 		1D7A4A051B423AEA005193F1 /* ROViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROViewController.m; sourceTree = "<group>"; };
+		1DDCB4811B53866A004C0278 /* CppTestList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CppTestList.plist; sourceTree = "<group>"; };
+		1DDCB4831B5386AA004C0278 /* JavatestList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JavatestList.plist; sourceTree = "<group>"; };
 		1DF7887A1B4F638300BAB0B2 /* ROLearnStageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROLearnStageModel.h; sourceTree = "<group>"; };
 		1DF7887B1B4F638300BAB0B2 /* ROLearnStageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROLearnStageModel.m; sourceTree = "<group>"; };
 		1DF7887D1B4F63B200BAB0B2 /* ROChildStageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROChildStageModel.h; sourceTree = "<group>"; };
@@ -244,6 +248,8 @@
 				1D0E090A1B40DEBE005B749F /* main.m */,
 				1DF7889C1B50C83C00BAB0B2 /* OnlineTestTitle.plist */,
 				1DF7889E1B50E07200BAB0B2 /* CTestList.plist */,
+				1DDCB4811B53866A004C0278 /* CppTestList.plist */,
+				1DDCB4831B5386AA004C0278 /* JavatestList.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -574,8 +580,10 @@
 			files = (
 				1DF7889D1B50C83C00BAB0B2 /* OnlineTestTitle.plist in Resources */,
 				1D17F0151B4A4ACF0047F5EC /* OnlineLearn.storyboard in Resources */,
+				1DDCB4821B53866A004C0278 /* CppTestList.plist in Resources */,
 				1D17F0171B4A4AE90047F5EC /* OnLineTest.storyboard in Resources */,
 				1DF7889F1B50E07200BAB0B2 /* CTestList.plist in Resources */,
+				1DDCB4841B5386AA004C0278 /* JavatestList.plist in Resources */,
 				1D17F0191B4A4AF50047F5EC /* Me.storyboard in Resources */,
 				1D0E09141B40DEBE005B749F /* Main.storyboard in Resources */,
 				1D0E09161B40DEBE005B749F /* Images.xcassets in Resources */,

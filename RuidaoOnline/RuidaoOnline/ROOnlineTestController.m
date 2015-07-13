@@ -7,6 +7,7 @@
 //
 
 #import "ROOnlineTestController.h"
+#import "ROOnlineTestQuestionController.h"
 
 @interface ROOnlineTestController ()
 @property (strong, nonatomic) NSArray* testTitleList;
@@ -20,7 +21,8 @@
     NSString* path = [[NSBundle mainBundle]pathForResource:@"OnlineTestTitle.plist" ofType:nil];
     
     _testTitleList = [NSArray arrayWithContentsOfFile:path];
-    
+    self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     [self.tableView reloadData];
 }
 
@@ -44,13 +46,20 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"onLineTestCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = _testTitleList[indexPath.row];
+    NSDictionary* dict = _testTitleList[indexPath.row];
+    cell.textLabel.text = [dict objectForKey:@"title"];
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self performSegueWithIdentifier:@"toRealTest" sender:nil];
+    NSDictionary* testTitleDict = _testTitleList[indexPath.row];
+    [self performSegueWithIdentifier:@"toRealTest" sender:testTitleDict];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    ROOnlineTestQuestionController* ontestCtlr = segue.destinationViewController;
+    ontestCtlr.testTitle = sender;
 }
 
 @end
