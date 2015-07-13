@@ -74,7 +74,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UILabel* header = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 30.f)];
     
-    header.backgroundColor = [UIColor purpleColor];
+    header.backgroundColor = [UIColor blueColor];
     header.textColor = [UIColor whiteColor];
     
     ROChapterModel* chapter = _chapterList[section];

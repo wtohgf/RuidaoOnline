@@ -33,6 +33,7 @@
 		1D7A4A061B423AEA005193F1 /* ROViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A4A051B423AEA005193F1 /* ROViewController.m */; };
 		1DDCB4821B53866A004C0278 /* CppTestList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DDCB4811B53866A004C0278 /* CppTestList.plist */; };
 		1DDCB4841B5386AA004C0278 /* JavatestList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DDCB4831B5386AA004C0278 /* JavatestList.plist */; };
+		1DDCB4911B53A9E9004C0278 /* RODetailButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDCB4901B53A9E9004C0278 /* RODetailButtonCell.m */; };
 		1DF7887C1B4F638300BAB0B2 /* ROLearnStageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7887B1B4F638300BAB0B2 /* ROLearnStageModel.m */; };
 		1DF7887F1B4F63B200BAB0B2 /* ROChildStageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7887E1B4F63B200BAB0B2 /* ROChildStageModel.m */; };
 		1DF788821B4F63ED00BAB0B2 /* ROCourseResModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF788811B4F63ED00BAB0B2 /* ROCourseResModel.m */; };
@@ -112,6 +113,8 @@
 		1D7A4A051B423AEA005193F1 /* ROViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROViewController.m; sourceTree = "<group>"; };
 		1DDCB4811B53866A004C0278 /* CppTestList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CppTestList.plist; sourceTree = "<group>"; };
 		1DDCB4831B5386AA004C0278 /* JavatestList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JavatestList.plist; sourceTree = "<group>"; };
+		1DDCB48F1B53A9E9004C0278 /* RODetailButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RODetailButtonCell.h; sourceTree = "<group>"; };
+		1DDCB4901B53A9E9004C0278 /* RODetailButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RODetailButtonCell.m; sourceTree = "<group>"; };
 		1DF7887A1B4F638300BAB0B2 /* ROLearnStageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROLearnStageModel.h; sourceTree = "<group>"; };
 		1DF7887B1B4F638300BAB0B2 /* ROLearnStageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROLearnStageModel.m; sourceTree = "<group>"; };
 		1DF7887D1B4F63B200BAB0B2 /* ROChildStageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROChildStageModel.h; sourceTree = "<group>"; };
@@ -198,13 +201,14 @@
 		1D004B941B4CF39E0087B1DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1D17F0141B4A4ACF0047F5EC /* OnlineLearn.storyboard */,
 				1D004B951B4CF3E90087B1DC /* ROPositionTableViewCell.h */,
 				1D004B961B4CF3E90087B1DC /* ROPositionTableViewCell.m */,
 				1D004B9B1B4DF9CD0087B1DC /* ROPositionHeaderCell.h */,
 				1D004B9C1B4DF9CD0087B1DC /* ROPositionHeaderCell.m */,
 				1D004B9E1B4E44AA0087B1DC /* ROCourseIntroduceCell.h */,
 				1D004B9F1B4E44AA0087B1DC /* ROCourseIntroduceCell.m */,
+				1DDCB48F1B53A9E9004C0278 /* RODetailButtonCell.h */,
+				1DDCB4901B53A9E9004C0278 /* RODetailButtonCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -275,7 +279,6 @@
 		1D0F28D11B4B5278009BCC97 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1D17F0181B4A4AF50047F5EC /* Me.storyboard */,
 				1D0F28D21B4B52C5009BCC97 /* ROLogoutTableViewCell.h */,
 				1D0F28D31B4B52C5009BCC97 /* ROLogoutTableViewCell.m */,
 			);
@@ -370,6 +373,7 @@
 		1D17F0111B4A4A640047F5EC /* OnLineLearn */ = {
 			isa = PBXGroup;
 			children = (
+				1D17F0141B4A4ACF0047F5EC /* OnlineLearn.storyboard */,
 				1DDCB48A1B539F1C004C0278 /* Controllers */,
 				1D004B941B4CF39E0087B1DC /* Views */,
 				1D004B8C1B4CA34C0087B1DC /* Models */,
@@ -380,6 +384,7 @@
 		1D17F0121B4A4A710047F5EC /* OnLineTest */ = {
 			isa = PBXGroup;
 			children = (
+				1D17F0161B4A4AE90047F5EC /* OnLineTest.storyboard */,
 				1DDCB4891B539F07004C0278 /* Controllers */,
 				1DF788A31B50E9C700BAB0B2 /* Views */,
 			);
@@ -389,6 +394,7 @@
 		1D17F0131B4A4A7A0047F5EC /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				1D17F0181B4A4AF50047F5EC /* Me.storyboard */,
 				1DDCB4871B539ED4004C0278 /* Controllers */,
 				1D0F28D51B4B7343009BCC97 /* Models */,
 				1D0F28D11B4B5278009BCC97 /* Views */,
@@ -493,7 +499,6 @@
 		1DF788A31B50E9C700BAB0B2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1D17F0161B4A4AE90047F5EC /* OnLineTest.storyboard */,
 				1DF788A41B50E9F300BAB0B2 /* ROQuestionControlCell.h */,
 				1DF788A51B50E9F300BAB0B2 /* ROQuestionControlCell.m */,
 				1DF788A71B50EE3C00BAB0B2 /* ROTestTableViewCell.h */,
@@ -690,6 +695,7 @@
 				1DF7887C1B4F638300BAB0B2 /* ROLearnStageModel.m in Sources */,
 				1D0F28DB1B4BA601009BCC97 /* ROOnLineLearnController.m in Sources */,
 				1D004B9A1B4CFB7D0087B1DC /* ROPosDetailController.m in Sources */,
+				1DDCB4911B53A9E9004C0278 /* RODetailButtonCell.m in Sources */,
 				1DF788881B509DC100BAB0B2 /* ROChapterModel.m in Sources */,
 				1D114A861B47736E0077AECF /* ROLogonReturnModel.m in Sources */,
 				1D004B971B4CF3E90087B1DC /* ROPositionTableViewCell.m in Sources */,
@@ -815,13 +821,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Neusoft RuiDao (ASW4CSW355)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neusoft RuiDao (ASW4CSW355)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = RuidaoOnline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c6d052ae-faca-4250-8838-cd008db9b4cf";
+				PROVISIONING_PROFILE = "8c3c9e51-5c9e-4fd1-b72d-630db91eb87c";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -832,13 +838,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Neusoft RuiDao (ASW4CSW355)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neusoft RuiDao (ASW4CSW355)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = RuidaoOnline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c6d052ae-faca-4250-8838-cd008db9b4cf";
+				PROVISIONING_PROFILE = "8c3c9e51-5c9e-4fd1-b72d-630db91eb87c";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

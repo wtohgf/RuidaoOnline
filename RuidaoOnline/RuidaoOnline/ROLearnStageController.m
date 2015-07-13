@@ -98,7 +98,7 @@
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
    
     UILabel* label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 30.f)];
-    label.backgroundColor = [UIColor purpleColor];
+    label.backgroundColor = [UIColor blueColor];
     //通过section 从学习阶段列表_courseList 取得对应的学习阶段模型
     ROLearnStageModel* learnStage = _courseList[section];
     //遍历学习阶段模型中的子阶段childStageList
