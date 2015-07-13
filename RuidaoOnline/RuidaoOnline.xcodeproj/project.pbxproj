@@ -198,6 +198,7 @@
 		1D004B941B4CF39E0087B1DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1D17F0141B4A4ACF0047F5EC /* OnlineLearn.storyboard */,
 				1D004B951B4CF3E90087B1DC /* ROPositionTableViewCell.h */,
 				1D004B961B4CF3E90087B1DC /* ROPositionTableViewCell.m */,
 				1D004B9B1B4DF9CD0087B1DC /* ROPositionHeaderCell.h */,
@@ -274,6 +275,7 @@
 		1D0F28D11B4B5278009BCC97 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1D17F0181B4A4AF50047F5EC /* Me.storyboard */,
 				1D0F28D21B4B52C5009BCC97 /* ROLogoutTableViewCell.h */,
 				1D0F28D31B4B52C5009BCC97 /* ROLogoutTableViewCell.m */,
 			);
@@ -301,9 +303,8 @@
 		1D114A7A1B4512920077AECF /* LogonPage */ = {
 			isa = PBXGroup;
 			children = (
-				1D114A831B47730B0077AECF /* Model */,
-				1D114A7B1B4512AE0077AECF /* ROLogonViewController.h */,
-				1D114A7C1B4512AE0077AECF /* ROLogonViewController.m */,
+				1DDCB48E1B539FAD004C0278 /* Controllers */,
+				1D114A831B47730B0077AECF /* Models */,
 			);
 			name = LogonPage;
 			sourceTree = "<group>";
@@ -328,13 +329,13 @@
 			name = Catagory;
 			sourceTree = "<group>";
 		};
-		1D114A831B47730B0077AECF /* Model */ = {
+		1D114A831B47730B0077AECF /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				1D114A841B47736E0077AECF /* ROLogonReturnModel.h */,
 				1D114A851B47736E0077AECF /* ROLogonReturnModel.m */,
 			);
-			name = Model;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		1D114A871B4784390077AECF /* Tools */ = {
@@ -352,34 +353,26 @@
 				1D17F0131B4A4A7A0047F5EC /* Me */,
 				1D17F0121B4A4A710047F5EC /* OnLineTest */,
 				1D17F0111B4A4A640047F5EC /* OnLineLearn */,
-				1D17F00D1B4A1FFA0047F5EC /* MainTabController */,
+				1D17F00D1B4A1FFA0047F5EC /* Common */,
 			);
 			name = MainUI;
 			sourceTree = "<group>";
 		};
-		1D17F00D1B4A1FFA0047F5EC /* MainTabController */ = {
+		1D17F00D1B4A1FFA0047F5EC /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				1D17F00E1B4A20680047F5EC /* ROMainTabBarController.h */,
 				1D17F00F1B4A20680047F5EC /* ROMainTabBarController.m */,
 			);
-			name = MainTabController;
+			name = Common;
 			sourceTree = "<group>";
 		};
 		1D17F0111B4A4A640047F5EC /* OnLineLearn */ = {
 			isa = PBXGroup;
 			children = (
+				1DDCB48A1B539F1C004C0278 /* Controllers */,
 				1D004B941B4CF39E0087B1DC /* Views */,
 				1D004B8C1B4CA34C0087B1DC /* Models */,
-				1D17F0141B4A4ACF0047F5EC /* OnlineLearn.storyboard */,
-				1D0F28D91B4BA601009BCC97 /* ROOnLineLearnController.h */,
-				1D0F28DA1B4BA601009BCC97 /* ROOnLineLearnController.m */,
-				1D004B981B4CFB7D0087B1DC /* ROPosDetailController.h */,
-				1D004B991B4CFB7D0087B1DC /* ROPosDetailController.m */,
-				1DF788831B4F993000BAB0B2 /* ROLearnStageController.h */,
-				1DF788841B4F993000BAB0B2 /* ROLearnStageController.m */,
-				1DF7888C1B50ACB800BAB0B2 /* ROChapterSessionController.h */,
-				1DF7888D1B50ACB800BAB0B2 /* ROChapterSessionController.m */,
 			);
 			name = OnLineLearn;
 			sourceTree = "<group>";
@@ -387,12 +380,8 @@
 		1D17F0121B4A4A710047F5EC /* OnLineTest */ = {
 			isa = PBXGroup;
 			children = (
+				1DDCB4891B539F07004C0278 /* Controllers */,
 				1DF788A31B50E9C700BAB0B2 /* Views */,
-				1D17F0161B4A4AE90047F5EC /* OnLineTest.storyboard */,
-				1DF788991B50C7F100BAB0B2 /* ROOnlineTestController.h */,
-				1DF7889A1B50C7F100BAB0B2 /* ROOnlineTestController.m */,
-				1DF788A01B50E2BE00BAB0B2 /* ROOnlineTestQuestionController.h */,
-				1DF788A11B50E2BE00BAB0B2 /* ROOnlineTestQuestionController.m */,
 			);
 			name = OnLineTest;
 			sourceTree = "<group>";
@@ -400,23 +389,11 @@
 		1D17F0131B4A4A7A0047F5EC /* Me */ = {
 			isa = PBXGroup;
 			children = (
-				1D17F01A1B4A5ACE0047F5EC /* MeMainPage */,
-				1D17F0181B4A4AF50047F5EC /* Me.storyboard */,
-			);
-			name = Me;
-			sourceTree = "<group>";
-		};
-		1D17F01A1B4A5ACE0047F5EC /* MeMainPage */ = {
-			isa = PBXGroup;
-			children = (
+				1DDCB4871B539ED4004C0278 /* Controllers */,
 				1D0F28D51B4B7343009BCC97 /* Models */,
 				1D0F28D11B4B5278009BCC97 /* Views */,
-				1D17F01B1B4A5B390047F5EC /* ROMeMainPageController.h */,
-				1D17F01C1B4A5B390047F5EC /* ROMeMainPageController.m */,
-				1DF788961B50C45B00BAB0B2 /* ROAboutRuiDoViewController.h */,
-				1DF788971B50C45B00BAB0B2 /* ROAboutRuiDoViewController.m */,
 			);
-			name = MeMainPage;
+			name = Me;
 			sourceTree = "<group>";
 		};
 		1D7A4A001B4239F5005193F1 /* UI */ = {
@@ -456,6 +433,52 @@
 			name = MainPage;
 			sourceTree = "<group>";
 		};
+		1DDCB4871B539ED4004C0278 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D17F01B1B4A5B390047F5EC /* ROMeMainPageController.h */,
+				1D17F01C1B4A5B390047F5EC /* ROMeMainPageController.m */,
+				1DF788961B50C45B00BAB0B2 /* ROAboutRuiDoViewController.h */,
+				1DF788971B50C45B00BAB0B2 /* ROAboutRuiDoViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1DDCB4891B539F07004C0278 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1DF788991B50C7F100BAB0B2 /* ROOnlineTestController.h */,
+				1DF7889A1B50C7F100BAB0B2 /* ROOnlineTestController.m */,
+				1DF788A01B50E2BE00BAB0B2 /* ROOnlineTestQuestionController.h */,
+				1DF788A11B50E2BE00BAB0B2 /* ROOnlineTestQuestionController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1DDCB48A1B539F1C004C0278 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D0F28D91B4BA601009BCC97 /* ROOnLineLearnController.h */,
+				1D0F28DA1B4BA601009BCC97 /* ROOnLineLearnController.m */,
+				1D004B981B4CFB7D0087B1DC /* ROPosDetailController.h */,
+				1D004B991B4CFB7D0087B1DC /* ROPosDetailController.m */,
+				1DF788831B4F993000BAB0B2 /* ROLearnStageController.h */,
+				1DF788841B4F993000BAB0B2 /* ROLearnStageController.m */,
+				1DF7888C1B50ACB800BAB0B2 /* ROChapterSessionController.h */,
+				1DF7888D1B50ACB800BAB0B2 /* ROChapterSessionController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1DDCB48E1B539FAD004C0278 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D114A7B1B4512AE0077AECF /* ROLogonViewController.h */,
+				1D114A7C1B4512AE0077AECF /* ROLogonViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		1DF7888F1B50C2E100BAB0B2 /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +493,7 @@
 		1DF788A31B50E9C700BAB0B2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1D17F0161B4A4AE90047F5EC /* OnLineTest.storyboard */,
 				1DF788A41B50E9F300BAB0B2 /* ROQuestionControlCell.h */,
 				1DF788A51B50E9F300BAB0B2 /* ROQuestionControlCell.m */,
 				1DF788A71B50EE3C00BAB0B2 /* ROTestTableViewCell.h */,
