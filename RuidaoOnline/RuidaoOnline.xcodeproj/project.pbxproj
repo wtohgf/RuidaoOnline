@@ -783,13 +783,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Neusoft RuiDao (ASW4CSW355)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neusoft RuiDao (ASW4CSW355)";
 				INFOPLIST_FILE = RuidaoOnline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "222c0bcd-a018-45a7-b2d9-a045997164cf";
+				PROVISIONING_PROFILE = "c6d052ae-faca-4250-8838-cd008db9b4cf";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -800,13 +800,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Neusoft RuiDao (ASW4CSW355)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neusoft RuiDao (ASW4CSW355)";
 				INFOPLIST_FILE = RuidaoOnline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "222c0bcd-a018-45a7-b2d9-a045997164cf";
+				PROVISIONING_PROFILE = "c6d052ae-faca-4250-8838-cd008db9b4cf";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

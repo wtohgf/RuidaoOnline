@@ -112,15 +112,19 @@
     NSString* rigthBarButtonTitle = [NSString stringWithFormat:@"答题进度%ld/%ld", _curQuestionIndex+1, _questionList.count];
     self.navigationItem.rightBarButtonItem.title = rigthBarButtonTitle;
     
+    [self.tableView reloadData];
     NSString* answer = _answerList[_curQuestionIndex];
     NSDictionary* dict = @{@"A": @1, @"B":@2, @"C":@3, @"D":@4};
     NSInteger selectIndex = [[dict objectForKey:answer] integerValue];
+    _curSelectedIndex = selectIndex;
     NSIndexPath* indexPath = [NSIndexPath indexPathForRow:selectIndex inSection:0];
+    
     [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionTop];
-    //[self.tableView reloadData];
+    
 }
 
 - (IBAction)nextQuestion:(UIButton *)sender {
+
     if (_curSelectedIndex == 0) {
         [MBProgressHUD showDelayHUDToView:self.view messeage:@"请您选择一个答案"];
         return;
@@ -142,10 +146,22 @@
         UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您确定要提交?" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
         [alertView show];
     }
+    
     NSString* rigthBarButtonTitle = [NSString stringWithFormat:@"答题进度%ld/%ld", _curQuestionIndex+1, _questionList.count];
     self.navigationItem.rightBarButtonItem.title = rigthBarButtonTitle;
     
     [self.tableView reloadData];
+    
+    if (_curQuestionIndex < _answerList.count) {
+        NSString* answer = _answerList[_curQuestionIndex];
+        NSDictionary* dict = @{@"A": @1, @"B":@2, @"C":@3, @"D":@4};
+        NSInteger selectIndex = [[dict objectForKey:answer] integerValue];
+        _curSelectedIndex = selectIndex;
+        NSIndexPath* indexPath = [NSIndexPath indexPathForRow:selectIndex inSection:0];
+        
+        [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionTop];
+    }
+    
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{

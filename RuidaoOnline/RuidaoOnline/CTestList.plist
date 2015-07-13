@@ -68,5 +68,38 @@
 			</dict>
 		</array>
 	</dict>
+	<dict>
+		<key>rightAnswer</key>
+		<string>B</string>
+		<key>question</key>
+		<string>标准库函数fgets(S，n，file)的功能是</string>
+		<key>Answers</key>
+		<array>
+			<dict>
+				<key>index</key>
+				<string>A</string>
+				<key>content</key>
+				<string>从文件file中读取长度为n的字符串存入字符数组s中</string>
+			</dict>
+			<dict>
+				<key>index</key>
+				<string>B</string>
+				<key>content</key>
+				<string>从文件file中读取长度不超过n-1个字符的字符串放到字符数组S中</string>
+			</dict>
+			<dict>
+				<key>index</key>
+				<string>C</string>
+				<key>content</key>
+				<string>从文件file中读到n个字符串存入字符数组s中</string>
+			</dict>
+			<dict>
+				<key>index</key>
+				<string>D</string>
+				<key>content</key>
+				<string>从文件file中读取长度为n-1个字符的字符串存人字符数组s中</string>
+			</dict>
+		</array>
+	</dict>
 </array>
 </plist>
