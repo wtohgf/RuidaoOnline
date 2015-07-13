@@ -104,6 +104,14 @@
 
 }
 
+-(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0 || indexPath.row == 5) {
+        return nil;
+    }else{
+        return indexPath;
+    }
+}
+
 - (IBAction)upQuestion:(UIButton *)sender {
     _curQuestionIndex--;
     if (_curQuestionIndex < 0) {
